@@ -70,7 +70,7 @@ Autor: Vinícius Barth
                     <fieldset>
                         <legend>Dados da Disciplina</legend>
                         <div class="form-group col-xs-12">
-                            <label for="inputNomeDisciplina">Nome da disciplina</label>
+                            <label for="inputNomeDisciplina">Nome</label>
                             <input type="text" class="form-control" id="inputNomeDisciplina" placeholder="">
                         </div>
 
@@ -84,7 +84,7 @@ Autor: Vinícius Barth
                         </div>
 
                         <div class="form-group col-xs-3">
-                            <label for="inputCodigoDisciplina">Código da disciplina</label>
+                            <label for="inputCodigoDisciplina">Código</label>
                             <input type="text" class="form-control" id="inputCodigoDisciplina" placeholder="">
                         </div>
 
