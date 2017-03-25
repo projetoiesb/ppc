@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+<!---
+Tela: de Cadastro de Professor
+Autor: Vinícius Barth
+  --->
+
 <html>
 <head>
 
@@ -57,14 +63,11 @@
                 <h1 class="page-header">Cadastro de Professor</h1>
             </div>
         </div>
-
-        <ul id="cadastroProfessorTabs" class="nav nav-tabs" data-tabs="cadastroProfessorTabs">
-            <li class="active"><a href="#dadosPessoais" data-toggle="tab">Dados Pessoais</a></li>
-            <li><a href="#atuacaoIES" data-toggle="tab">Atuação IES</a></li>
-        </ul>
-        <div id="my-tab-content" class="tab-content">
-            <div class="tab-pane active" id="dadosPessoais">
-                <form>
+        <div class="row">
+            <div class="col-xs-12">
+                <form class="well">
+                    <fieldset>
+                        <legend>Dados Pessoais</legend>
                     <div class="form-group col-xs-8">
                         <label for="nomeProfessor">Nome</label>
                         <input type="text" class="form-control" id="nomeProfessor" placeholder="nome completo">
@@ -94,106 +97,123 @@
                         <label for="dataAtualizacaoProfessor">Data da última atualização</label>
                         <input type="date" class="form-control" id="linkLattesProfessor" placeholder="">
                     </div>
+                    </fieldset>
 
                 </form>
             </div>
-            <div class="tab-pane" id="atuacaoIES">
+        </div>
+        
+        <ul id="cadastroProfessorTabs" class="nav nav-tabs" data-tabs="cadastroProfessorTabs">
+            <li class="active"><a href="#atuacaoIESGeral" data-toggle="tab">Geral</a></li>
+            <li><a href="#atuacaoIESProfissional" data-toggle="tab">Atuação Profissional</a></li>
+            <li><a href="#atuacaoIESPublicacoes" data-toggle="tab">Publicações</a></li>
+        </ul>
+        
+        <div id="my-tab-content" class="tab-content">
+            <div class="tab-pane active" id="atuacaoIESGeral">
                 <div class="row">
                     <div class="col-xs-12">
-                        <form>
-                            <div class="form-group col-xs-3">
-                                <label for="matriculaProfessor">Matricula</label>
-                                <input type="text" class="form-control" id="matriculaProfessor" placeholder="123456678">
-                            </div>
+                        <form class="well">
+                            <fieldset>
+                                <div class="form-group col-xs-3">
+                                    <label for="matriculaProfessor">Matricula</label>
+                                    <input type="text" class="form-control" id="matriculaProfessor" placeholder="123456678">
+                                </div>
 
-                            <div class="form-group col-xs-2">
-                                <label for="dataAdmissaoProfessor">Data de admissão</label>
-                                <input type="date" class="form-control" id="dataAdmissaoProfessor" placeholder="">
-                            </div>
+                                <div class="form-group col-xs-2">
+                                    <label for="dataAdmissaoProfessor">Data de admissão</label>
+                                    <input type="date" class="form-control" id="dataAdmissaoProfessor" placeholder="">
+                                </div>
+                            </fieldset>
                         </form>
                     </div>
                 </div>
+                
                 <div class="row">
                     <div class="col-xs-12">
-                        <hr />
-                        <p class="text-center">Informe a quantidade de horas das atividades</p>
+                        <form class="form-horizontal well">
+                            
+                            <fieldset>
+                                <legend>Informe a quantidade de horas das atividades</legend>
+                                <div class="col-xs-4">
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputHorasNDE" placeholder="01">
+                                        </div>
+                                        <label for="inputHorasNDE" class="control-label">NDE</label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputHorasTCC" placeholder="01">
+                                        </div>
+                                        <label for="inputHorasTCC" class="control-label">Orientação TCC</label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputHorasCoordenacao" placeholder="01">
+                                        </div>
+                                        <label for="inputHorasCoordenacao" class="control-label">Coordenação Curso</label>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="col-xs-4">                       
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputHorasCoordenacaoOutros" placeholder="01">
+                                        </div>
+                                        <label for="inputHorasCoordenacaoOutros" class="control-label">Coordenação Outros Cursos</label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputPesquisa" placeholder="01">
+                                        </div>                                
+                                        <label for="inputPesquisa" class="control-label">Pesquisa (semestre atual)</label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputAtividadeExtraCurso" placeholder="01">
+                                        </div>
+                                        <label for="inputAtividadeExtraCurso" class="control-label">Atividades extra classe no curso</label>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="col-xs-4">
+
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputAtvidadeExtraOutros" placeholder="01">
+                                        </div>
+                                        <label for="inputAtividadeExtraOutros" class="control-label">Atividade extra classe em outros cursos</label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputQuantidadeHorasCurso" placeholder="01">
+                                        </div>
+                                        <label for="inputQuantidadeHorasCurso" class="control-label">Qtde de horas no curso</label>
+                                    </div>
+                                    
+                                    
+                                <div class="form-group">
+                                    <div class="col-xs-3">
+                                        <input type="text" class="form-control" id="inputQuantidadeHorasOutros" placeholder="01">
+                                    </div>
+                                    <label for="inputQuantidadeHorasOutros" class="control-label">Qtde de horas outros cursos</label>
+                                </div>
+                                
+                                </div>
+                                
+                            </fieldset>
+                        </form>
                     </div>
-                </div>
-
-                <div class="row">
-                <div class="col-xs-6">
-                    <form class="form-horizontal">
-                        
-                        <div class="form-group">
-                            <div class="col-xs-2">
-                                <input type="text" class="form-control" id="inputHorasNDE" placeholder="01">
-                            </div>
-                            <label for="inputHorasNDE" class="control-label">NDE</label>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-xs-2">
-                                <input type="text" class="form-control" id="inputHorasTCC" placeholder="01">
-                            </div>
-                            <label for="inputHorasTCC" class="control-label">Orientação TCC</label>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-xs-2">
-                                <input type="text" class="form-control" id="inputHorasCoordenacao" placeholder="01">
-                            </div>
-                            <label for="inputHorasCoordenacao" class="control-label">Coordenação Curso</label>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-xs-2">
-                                <input type="text" class="form-control" id="inputHorasCoordenacaoOutros" placeholder="01">
-                            </div>
-                            <label for="inputHorasCoordenacaoOutros" class="control-label">Coordenação Outros Cursos</label>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-xs-2">
-                                <input type="text" class="form-control" id="inputPesquisa" placeholder="01">
-                            </div>
-                            <label for="inputPesquisa" class="control-label">Pesquisa (semestre atual)</label>
-                        </div>
-                    </form>
-                </div>
-               
-                <div class="col-xs-6">
-                    <form class="form-horizontal">
-                        
-                        <div class="form-group">
-                            <div class="col-xs-2">
-                                <input type="text" class="form-control" id="inputAtividadeExtraCurso" placeholder="01">
-                            </div>
-                            <label for="inputAtividadeExtraCurso" class="control-label">Atividades extra classe no curso</label>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-xs-2">
-                                <input type="text" class="form-control" id="inputAtvidadeExtraOutros" placeholder="01">
-                            </div>
-                            <label for="inputAtividadeExtraOutros" class="control-label">Atividade extra classe em outros cursos</label>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-xs-2">
-                                <input type="text" class="form-control" id="inputQuantidadeHorasCurso" placeholder="01">
-                            </div>
-                            <label for="inputQuantidadeHorasCurso" class="control-label">Qtde de horas curso</label>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-xs-2">
-                                <input type="text" class="form-control" id="inputQuantidadeHorasOutros" placeholder="01">
-                            </div>
-                            <label for="inputQuantidadeHorasOutros" class="control-label">Qtde de horas outros cursos</label>
-                        </div>
-
-                    </form>
-                </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-6 ">
@@ -206,7 +226,7 @@
                             <li class="list-group-item">Vestibulum at eros</li>
                         </ul>
                     </div>
-                
+                    
                     <div class="col-xs-6 ">
                         <p class="text-center">Disciplinas ministradas em outros cursos</p>
                         <ul class="list-group">
@@ -220,16 +240,252 @@
                 </div>
                 
             </div>            
+
+            <div class="tab-pane active" id="atuacaoIESProfissional">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <form class="form-horizontal well">
+                            
+                            <div class="form-group">
+                                <div class="col-xs-4">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Membro NDE?
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-xs-4">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Membro Colegiado?
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-xs-4">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Docente com formação/capacitação/experiência pedagógica?
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </form>
+
+                        <hr />
+                        <p class="text-center">O sistema irá calcular o tempo em anos e meses, a partir da diferença com a data inicial</p>
+
+                        <div class="col-xs-12">
+                            <form class="form-inline well">
+                                <fieldset>
+                                    <legend>Tempo de vinculo ininterrupto do docente com o curso</legend>
+                                    <div class="form-group col-xs-4">
+                                        <label for="dataVinculoCurso">Data inicial</label>
+                                        <input type="date" class="form-control" id="dataVinculoCurso" placeholder="">
+                                    </div>
+                                </fieldset>
+
+                                <fieldset>
+                                    <legend>Tempo de experiência no magistério superior</legend>
+                                    <div class="form-group col-xs-4">
+                                        <label for="dataExperienciaMagisterio">Data Inicial</label>
+                                        <input type="date" class="form-control" id="dataExperienciaMagisterio" placeholder="">
+                                    </div>                                 
+                                </fieldset>
+
+                                <fieldset>
+                                    <legend>Tempo de experiência em cursos a distância</legend>
+                                    <div class="form-group col-xs-4">
+                                        <label for="dataExperienciaCursoDistancia">Data Inicial</label>
+                                        <input type="date" class="form-control" id="dataExperienciaCursoDistancia" placeholder="">
+                                    </div>                                 
+                                </fieldset>
+
+                                <fieldset>
+                                    <legend>Tempo de experiência profissional</legend>
+                                    <div class="form-group col-xs-4">
+                                        <label for="dataExperienciaProfissional">Data Inicial</label>
+                                        <input type="date" class="form-control" id="dataExperienciaProfissional" placeholder="">
+                                    </div>                                 
+                                </fieldset>
+
+                                
+                            </form>
+                            <p class="text-center">Participação em Eventos</p>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a class="btn btn-default" href="#" role="button">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </a>
+                                    <a class="btn btn-default" href="#" role="button">
+                                        <span class="glyphicon glyphicon-minus"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item">Cras justo odio</li>
+                                <li class="list-group-item">Dapibus ac facilisis in</li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane active" id="atuacaoIESPublicacoes">
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form class="form-horizontal well">
+
+                            <fieldset>
+                                <legend>Artigos publicados em periódicos científicos</legend>
+                                <div class="col-xs-4">
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputArtigosPublicadosArea" placeholder="01">
+                                        </div>
+                                        <label for="inputArtigosPublicadosArea" class="control-label">na área</label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputArtigosPublicadosOutras" placeholder="01">
+                                        </div>
+                                        <label for="inputArtigosPublicadosOutras" class="control-label">em outras áreas</label>
+                                    </div>
+                            </fieldset>                                   
+
+                            <fieldset>
+                                <legend>Livros ou Capítulos</legend>
+                                <div class="col-xs-4">
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputLivrosPublicadosArea" placeholder="01">
+                                        </div>
+                                        <label for="inputLivrosPublicadosArea" class="control-label">na área</label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputLivrosPublicadosOutras" placeholder="01">
+                                        </div>
+                                        <label for="inputLivrosPublicadosOutras" class="control-label">em outras áreas</label>
+                                    </div>
+                            </fieldset>                                   
+
+                            <fieldset>
+                                <legend>Trabalhos publicados em anais</legend>
+                                <div class="col-xs-4">
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputTrabalhosCompletos" placeholder="01">
+                                        </div>
+                                        <label for="inputTrabalhosCompletos" class="control-label">completos</label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputTrabalhosResumos" placeholder="01">
+                                        </div>
+                                        <label for="inputTrabalhosResumos" class="control-label">resumos</label>
+                                    </div>
+                            </fieldset>                                   
+
+                            <fieldset>
+                                <legend>Propriedade Intelectual</legend>
+                                <div class="col-xs-4">
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputPropriedadeDepositada" placeholder="01">
+                                        </div>
+                                        <label for="inputPropriedadeDepositada" class="control-label">depositada</label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" id="inputPropriedadeRegistrada" placeholder="01">
+                                        </div>
+                                        <label for="inputPropriedadeRegistrada" class="control-label">registrada</label>
+                                    </div>
+                            </fieldset>                                   
+
+                            <fieldset>
+                                <legend>Outras publicações</legend>
+                                <div class="col-xs-6">
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-2">
+                                            <input type="text" class="form-control" id="inputTraducoes" placeholder="01">
+                                        </div>
+                                        <label for="inputTraducoes" class="control-label">Traduções de livros, capítulos de livros ou artigos publicados</label>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="col-xs-2">
+                                            <input type="text" class="form-control" id="inputProjetos" placeholder="01">
+                                        </div>
+                                        <label for="inputProjetos" class="control-label">Projetos e/ou produções técnicos artísticos e culturais</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-xs-2">
+                                            <input type="text" class="form-control" id="inputProducao" placeholder="01">
+                                        </div>
+                                        <label for="inputProducao" class="control-label">Produção didático-pedagógica relevante, publicada ou não</label>
+                                    </div>
+                            </fieldset>                                   
+                            
+                        </form>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p class="">Anexar comprovantes</p>
+                                
+                                <a class="btn btn-default" href="#" role="button">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </a>
+                                <a class="btn btn-default" href="#" role="button">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Morbi leo risus</li>
+                            <li class="list-group-item">Porta ac consectetur ac</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                        
+                        
+                        </div>
+                </div>  
+            </div>
+
         </div>
         
-    
+        
         <div class="row">
             <div class="col-lg-12">
                 <hr />
                 
                 <button type="button" class="btn btn-primary">Salvar</button>
                 <button type="button" class="btn btn-danger">Cancelar</button>
-
+                
                 <hr />
             </div>
         </div>
