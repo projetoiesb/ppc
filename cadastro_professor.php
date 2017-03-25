@@ -57,7 +57,6 @@ Autor: Vinícius Barth
 
     <!-- Page Content -->
     <div class="container">
-        <!-- Identificação do Curso -->
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Cadastro de Professor</h1>
@@ -239,9 +238,9 @@ Autor: Vinícius Barth
                     </div>
                 </div>
                 
-            </div>            
+            </div>
 
-            <div class="tab-pane active" id="atuacaoIESProfissional">
+            <div class="tab-pane" id="atuacaoIESProfissional">
                 <div class="row">
                     <div class="col-xs-12">
 
@@ -282,7 +281,6 @@ Autor: Vinícius Barth
                         <hr />
                         <p class="text-center">O sistema irá calcular o tempo em anos e meses, a partir da diferença com a data inicial</p>
 
-                        <div class="col-xs-12">
                             <form class="form-inline well">
                                 <fieldset>
                                     <legend>Tempo de vinculo ininterrupto do docente com o curso</legend>
@@ -338,162 +336,153 @@ Autor: Vinícius Barth
                             </ul>
                         </div>
                     </div>
-                </div>
             </div>
 
-            <div class="tab-pane active" id="atuacaoIESPublicacoes">
+            <div class="tab-pane" id="atuacaoIESPublicacoes">
 
                 <div class="row">
                     <div class="col-xs-12">
                         <form class="form-horizontal well">
-
-                            <fieldset>
+                            
+                            <fieldset class="col-xs-6">
                                 <legend>Artigos publicados em periódicos científicos</legend>
-                                <div class="col-xs-4">
-                                    
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputArtigosPublicadosArea" placeholder="01">
-                                        </div>
-                                        <label for="inputArtigosPublicadosArea" class="control-label">na área</label>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-2">
+                                        <input type="text" class="form-control" id="inputArtigosPublicadosArea" placeholder="01">
                                     </div>
-                                    
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputArtigosPublicadosOutras" placeholder="01">
-                                        </div>
-                                        <label for="inputArtigosPublicadosOutras" class="control-label">em outras áreas</label>
+                                    <label for="inputArtigosPublicadosArea" class="control-label">na área</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-2">
+                                        <input type="text" class="form-control" id="inputArtigosPublicadosOutras" placeholder="01">
                                     </div>
+                                    <label for="inputArtigosPublicadosOutras" class="control-label">em outras áreas</label>
+                                </div>
                             </fieldset>                                   
-
-                            <fieldset>
+                            
+                            <fieldset class="col-xs-6">
                                 <legend>Livros ou Capítulos</legend>
-                                <div class="col-xs-4">
-                                    
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputLivrosPublicadosArea" placeholder="01">
-                                        </div>
-                                        <label for="inputLivrosPublicadosArea" class="control-label">na área</label>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-2">
+                                        <input type="text" class="form-control" id="inputLivrosPublicadosArea" placeholder="01">
                                     </div>
+                                    <label for="inputLivrosPublicadosArea" class="control-label">na área</label>
+                                </div>
                                     
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputLivrosPublicadosOutras" placeholder="01">
-                                        </div>
-                                        <label for="inputLivrosPublicadosOutras" class="control-label">em outras áreas</label>
+                                <div class="form-group">
+                                    <div class="col-xs-2">
+                                        <input type="text" class="form-control" id="inputLivrosPublicadosOutras" placeholder="01">
                                     </div>
+                                    <label for="inputLivrosPublicadosOutras" class="control-label">em outras áreas</label>
+                                </div>
                             </fieldset>                                   
-
-                            <fieldset>
+                            
+                            <fieldset class="col-xs-6">
                                 <legend>Trabalhos publicados em anais</legend>
-                                <div class="col-xs-4">
                                     
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputTrabalhosCompletos" placeholder="01">
-                                        </div>
-                                        <label for="inputTrabalhosCompletos" class="control-label">completos</label>
+                                <div class="form-group">
+                                    <div class="col-xs-2">
+                                        <input type="text" class="form-control" id="inputTrabalhosCompletos" placeholder="01">
                                     </div>
-                                    
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputTrabalhosResumos" placeholder="01">
-                                        </div>
-                                        <label for="inputTrabalhosResumos" class="control-label">resumos</label>
+                                    <label for="inputTrabalhosCompletos" class="control-label">completos</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-2">
+                                        <input type="text" class="form-control" id="inputTrabalhosResumos" placeholder="01">
                                     </div>
+                                    <label for="inputTrabalhosResumos" class="control-label">resumos</label>
+                                </div>
                             </fieldset>                                   
-
-                            <fieldset>
+                            
+                            <fieldset class="col-xs-6">
                                 <legend>Propriedade Intelectual</legend>
-                                <div class="col-xs-4">
-                                    
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputPropriedadeDepositada" placeholder="01">
-                                        </div>
-                                        <label for="inputPropriedadeDepositada" class="control-label">depositada</label>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-2">
+                                        <input type="text" class="form-control" id="inputPropriedadeDepositada" placeholder="01">
                                     </div>
-                                    
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputPropriedadeRegistrada" placeholder="01">
-                                        </div>
-                                        <label for="inputPropriedadeRegistrada" class="control-label">registrada</label>
+                                    <label for="inputPropriedadeDepositada" class="control-label">depositada</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-2">
+                                        <input type="text" class="form-control" id="inputPropriedadeRegistrada" placeholder="01">
                                     </div>
+                                    <label for="inputPropriedadeRegistrada" class="control-label">registrada</label>
+                                </div>
                             </fieldset>                                   
-
-                            <fieldset>
+                            
+                            <fieldset class-"col-xs-6">
                                 <legend>Outras publicações</legend>
-                                <div class="col-xs-6">
-                                    
-                                    <div class="form-group">
-                                        <div class="col-xs-2">
-                                            <input type="text" class="form-control" id="inputTraducoes" placeholder="01">
-                                        </div>
-                                        <label for="inputTraducoes" class="control-label">Traduções de livros, capítulos de livros ou artigos publicados</label>
+                                
+                                <div class="form-group col-xs-6">
+                                    <div class="col-xs-2">
+                                        <input type="text" class="form-control" id="inputTraducoes" placeholder="01">
                                     </div>
-                                    
-                                    <div class="form-group">
-                                        <div class="col-xs-2">
-                                            <input type="text" class="form-control" id="inputProjetos" placeholder="01">
-                                        </div>
-                                        <label for="inputProjetos" class="control-label">Projetos e/ou produções técnicos artísticos e culturais</label>
+                                    <label for="inputTraducoes" class="control-label">Traduções de livros, capítulos de livros ou artigos publicados</label>
+                                </div>
+                                
+                                <div class="form-group col-xs-6">
+                                    <div class="col-xs-2">
+                                        <input type="text" class="form-control" id="inputProjetos" placeholder="01">
                                     </div>
-
-                                    <div class="form-group">
-                                        <div class="col-xs-2">
-                                            <input type="text" class="form-control" id="inputProducao" placeholder="01">
-                                        </div>
-                                        <label for="inputProducao" class="control-label">Produção didático-pedagógica relevante, publicada ou não</label>
+                                    <label for="inputProjetos" class="control-label">Projetos e/ou produções técnicos artísticos e culturais</label>
+                                </div>
+                                
+                                <div class="form-group col-xs-6">
+                                    <div class="col-xs-2">
+                                        <input type="text" class="form-control" id="inputProducao" placeholder="01">
                                     </div>
+                                    <label for="inputProducao" class="control-label">Produção didático-pedagógica relevante, publicada ou não</label>
+                                </div>
                             </fieldset>                                   
                             
                         </form>
+                    </div>
+                </div>
 
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <p class="">Anexar comprovantes</p>
-                                
-                                <a class="btn btn-default" href="#" role="button">
-                                    <span class="glyphicon glyphicon-plus"></span>
-                                </a>
-                                <a class="btn btn-default" href="#" role="button">
-                                    <span class="glyphicon glyphicon-minus"></span>
-                                </a>
-                            </div>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Morbi leo risus</li>
-                            <li class="list-group-item">Porta ac consectetur ac</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
-                        
-                        
-                        </div>
-                </div>  
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="">Anexar comprovantes</p>
+                    
+                    <a class="btn btn-default" href="#" role="button">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </a>
+                    <a class="btn btn-default" href="#" role="button">
+                        <span class="glyphicon glyphicon-minus"></span>
+                    </a>
+                </div>
             </div>
-
-        </div>
-        
-        
+            <ul class="list-group">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+            
+            
+            </div>
         <div class="row">
             <div class="col-lg-12">
                 <hr />
-                
+            
                 <button type="button" class="btn btn-primary">Salvar</button>
                 <button type="button" class="btn btn-danger">Cancelar</button>
-                
+            
                 <hr />
             </div>
         </div>
+        </div>
     </div>
-    
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
+    
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 </body>
