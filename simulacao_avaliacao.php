@@ -12,7 +12,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link href="css/round-about.css" rel="stylesheet">  
+    <link href="css/round-about.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <title>Simulação de Avaliação</title>
 </head>
 <body>
@@ -57,7 +58,8 @@
                 <h1 class="page-header">Identificação do Curso</h1>
             </div>
         </div>
-        <form class="" method="post">
+        <!-- Inicio do Formulário -->
+        <form class="well" method="post">
         <div class="row">
             <fieldset>
                 <div class="form-group">
@@ -94,6 +96,7 @@
                 </div>
             </fieldset>
         </div>
+        <hr />
         <!-- Tabs -->
         <div class="row">
             <div class="col-lg-12">
@@ -113,6 +116,7 @@
                 </ul>
             </div>
         </div>
+        <!-- Fim das Tabs -->
         <div class="row">
             <div id="my-tab-content" class="tab-content">
                 <div class="tab-pane active col-lg-12" id="dimensao1">
@@ -164,6 +168,7 @@
                             </div>
                         </div>
                     </div>
+                    <hr />
 
                     <div class="row">
                         <h4>Categoria de análise: Projeto Pedagógico do Curso: formação</h4>
@@ -212,6 +217,7 @@
                             </div>
                         </div>
                     </div>
+                    <hr />
 
                     <div class="row">
                         <h4>Relato Global da Dimensão 1 - Organização Didática Pedagógica</h4>
@@ -225,8 +231,67 @@
                 </div>
 
                 <div class="tab-pane" id="simular_nota">
-                    <h1>Simular Nota</h1>
-                    <p>Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum egestas augue arcu ut est. Quem num gosti di mum que vai caçá sua turmis! Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Viva Forevis aptent taciti sociosqu ad litora torquent</p>
+                    <!-- Reconhecimento de Curso -->
+                    <div class="row">
+                        <h4>Formulário de Reconhecimento de Curso</h4>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="Dimensao">Dimensão</label>
+                                <select class="form-control">
+                                    <option>-- Selecione --</option>
+                                    <option>1. Dimensão 1</option>
+                                    <option>2. Dimensão 2</option>
+                                    <option>3. Dimensão 3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="Item">Item Selecionado</label>
+                                <textarea class="form-control" id="item" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <label for="Nota">Nota Atribuída</label>
+                                <div class="circle">4</div>
+                                <button type="button" class="btn btn-success">Calcular Nota</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Reconhecimento de Curso -->
+                    <!-- Calculo das Notas -->
+                    <div class="row">
+                        <h4>Cálculo das Notas</h4>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="Dimensao">Dimensão</label>
+                                <select class="form-control">
+                                    <option>-- Selecione --</option>
+                                    <option>1. Dimensão 1</option>
+                                    <option>2. Dimensão 2</option>
+                                    <option>3. Dimensão 3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="Conceito">Item Selecionado</label>
+                                <textarea class="form-control" id="item" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <div class="form-group">
+                                <div class="circle">4</div>
+                                <button type="button" class="btn btn-success">Calcular Nota</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Calculo das Notas -->
                 </div>
 
                 <div class="tab-pane" id="gerar_manual">
@@ -235,6 +300,7 @@
                 </div>
             </div>
         </div>
+        <hr />
 
         <div class="row">
             <button type="button" class="btn btn-warning">Revisar</button>
@@ -242,6 +308,7 @@
             <button type="button" class="btn btn-success">Simular</button>
         </div>
         </form>
+        <!-- Fim do Formulário -->
     </div>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
