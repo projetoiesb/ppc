@@ -262,36 +262,50 @@
                         </div>
                     </div>
                     <!-- Fim Reconhecimento de Curso -->
+                    <hr />
                     <!-- Calculo das Notas -->
                     <div class="row">
                         <h4>Cálculo das Notas</h4>
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label for="Dimensao">Dimensão</label>
-                                <select class="form-control">
-                                    <option>-- Selecione --</option>
-                                    <option>1. Dimensão 1</option>
-                                    <option>2. Dimensão 2</option>
-                                    <option>3. Dimensão 3</option>
-                                </select>
-                            </div>
-                        </div>
+                        <div class="col-lg-12">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                      <th></th>
+                                      <th>Itens</th>
+                                      <th>Notas</th>
+                                      <th>Propor Melhorias</th>
+                                      <th>Nota Final</th>
+                                    </tr>
+                                </thead>
 
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label for="Conceito">Item Selecionado</label>
-                                <textarea class="form-control" id="item" rows="3"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-2">
-                            <div class="form-group">
-                                <div class="circle">4</div>
-                                <button type="button" class="btn btn-success">Calcular Nota</button>
-                            </div>
+                                <tbody>
+                                    <tr>
+                                      <th></th>
+                                      <th scope="row">1. Dimensão 1</th>
+                                      <td>4</td>
+                                      <td>
+                                        <button type="button" class="btn btn-success">Sugestão</button>
+                                      </td>
+                                      <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                     <!-- Fim Calculo das Notas -->
+                    <hr />
+                    <!-- Sugestão -->
+                    <div class="row">
+                        <h4>Descreva a sugestão de Melhoria</h4>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="Item">Item Selecionado</label>
+                                <input type="text" name="item" disabled value="1. Dimensão 1">
+                                <textarea class="form-control" id="item" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Sugestão -->
                 </div>
 
                 <div class="tab-pane" id="gerar_manual">
