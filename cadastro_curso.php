@@ -1,3 +1,8 @@
+<!-- 
+    Projeto Integrador III
+    Cadastro de cursos
+    Autor: Hugo
+-->
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Cadastro de cursos</title>
+    <title>Cadastro PPC</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -39,19 +44,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Cadastro PPC</a>
+                <a class="navbar-brand" href="#">Plano Pedagógico de Curso</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Sobre</a>
+                        <a href="#">Cadastro</a>
                     </li>
                     <li>
-                        <a href="#">Serviços</a>
+                        <a href="#">Histórico</a>
                     </li>
                     <li>
-                        <a href="#">Contato</a>
+                        <a href="#">...</a>
                     </li>
                 </ul>
             </div>
@@ -75,11 +80,21 @@
             <div class="row">
                 <div class="col-lg-6">
                     <label for="tipo_curso_txt">Tipo de curso *</label>
-                    <input required type="text" class="form-control" id="tipo_curso_txt" />
+                    <select required class="form-control" id="tipo_curso_txt">
+                        <option>Selecione</option>
+                        <option>Curso Superior Tecnológico</option>
+                        <option>Curso Superior Licenciatura</option>
+                        <option>Curso Superior Bacharelado</option>
+                        <option>Curso Superior Sequencial</option>
+                    </select>
                 </div>
                 <div class="col-lg-6">
                     <label for="modalidade_txt">Modalidade *</label>
-                    <input required type="text" class="form-control" id="modalidade_txt" />
+                    <select required class="form-control" id="modalidade_txt">
+                        <option>Selecione</option>
+                        <option>Presencial</option>
+                        <option>A distância</option>
+                    </select>
                 </div>
             </div>
             <div class="row">
@@ -90,8 +105,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <label for="habilitacao_curso_txt">Habilitação *</label>
-                    <input required type="text" class="form-control" id="habilitacao_curso_txt" />
+                    <label for="habilitacao_curso_txt">Habilitação</label>
+                    <input type="text" class="form-control" id="habilitacao_curso_txt" />
                 </div>
                 <div class="col-lg-6">
                     <label for="local_curso_txt">Local de oferta *</label>
@@ -100,11 +115,12 @@
             </div>
             <div class="row">
                 <div class="col-lg-4">
-                    <label for="turno_curso">Turno curso *</label>
+                    <label for="turno_curso">Turnos *</label>
                     <br />
-                    <label class="checkbox-inline"><input type="checkbox" value="1" checked="true">Manhã</label>
-                    <label class="checkbox-inline"><input type="checkbox" value="2">Tarde</label>
-                    <label class="checkbox-inline"><input type="checkbox" value="3">Noite</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="1" checked>A distância</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="2">Manhã</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="3">Tarde</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="4">Noite</label>
                 </div>
                 <div class="col-lg-4">
                     <label for="vagas_turno_curso_txt">Vagas por turno *</label>
@@ -143,32 +159,28 @@
             
             <div class="row">
                 <div class="form-group col-lg-6">
-                    <label for="nome_coordenador_slc">Nome</label>
-                    <select class="form-control" id="nome_coordenador_slc">
-                        <option>Selecione o coordenador</option>
-                        <option>Fulano</option>
-                        <option>Ciclano</option>
-                    </select>
-                    <a href="#">Cadastrar coordenador</a>
+                    <label for="nome_coordenador_txt">Nome *</label>
+                    <input type="text" class="form-control" id="nome_coordenador_txt" />
+                    <a href="#">Cadastrar novo</a>
                 </div>
                 <div class="col-lg-6">
-                    <label for="cpf_coordenador_txt">CPF</label>
+                    <label for="cpf_coordenador_txt">CPF *</label>
                     <input disabled="true" type="text" class="form-control" id="cpf_coordenador_txt" />
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <label for="titulacao_coordenador_txt">Titulação</label>
+                    <label for="titulacao_coordenador_txt">Titulação *</label>
                     <input disabled="true" type="text" class="form-control" id="titulacao_coordenador_txt" />
                 </div>
                 <div class="col-lg-6">
-                    <label for="tempo_dedicacao_txt">Tempo de dedicação</label>
-                    <input disabled="true" type="text" class="form-control" id="tempo_dedicacao_txt" />
+                    <label for="tempo_dedicacao_txt">Tempo de dedicação *</label>
+                    <input type="text" class="form-control" id="tempo_dedicacao_txt" />
                 </div>
             </div>
             <div class="row">
                 <hr />
-                <div class="col-lg-12">
+                <div class="col-lg-12" style="text-align: center;">
                     <input type="reset" class="btn btn-default" value="Limpar" />
                     <input type="submit" class="btn btn-primary" value="Enviar" />
                 </div>

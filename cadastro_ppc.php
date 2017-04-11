@@ -39,19 +39,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Cadastro PPC</a>
+                <a class="navbar-brand" href="#">Plano Pedagógico de Curso</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Sobre</a>
+                        <a href="#">Cadastro</a>
                     </li>
                     <li>
-                        <a href="#">Serviços</a>
+                        <a href="#">Histórico</a>
                     </li>
                     <li>
-                        <a href="#">Contato</a>
+                        <a href="#">...</a>
                     </li>
                 </ul>
             </div>
@@ -74,8 +74,12 @@
         <form action="#" method="post">
             <div class="row">
                 <div class="col-lg-8">
-                    <label for="nome_curso_txt">Curso *</label>
-                    <input required type="text" class="form-control" id="nome_curso_txt" />
+                    <label for="nome_curso_slc">Curso *</label>
+                    <select required class="form-control" id="nome_curso_slc">
+                        <option>Selecione</option>
+                        <option>CST em Análise e Desenvolvimento de sistemas EAD</option>
+                        <option>...</option>
+                    </select>
                 </div>
             </div>
             <div class="row">
@@ -143,8 +147,14 @@
                 </div>
             </div>
             <div class="row">
-                <hr />
                 <div class="col-lg-12">
+                    <label for="ementario_bibliografia_txt">Ementário e Bibliografia *</label>
+                    <textarea required class="form-control" rows="5" id="ementario_bibliografia_txt"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <hr />
+                <div style="text-align: center;" class="col-lg-12">
                     <input type="reset" class="btn btn-default" value="Limpar" />
                     <input type="submit" class="btn btn-primary" value="Enviar" />
                 </div>
