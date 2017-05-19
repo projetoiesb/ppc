@@ -22,467 +22,108 @@ Autor: Vinícius Barth
     <title>Cadastro de Professor</title>
 </head>
 <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
+    <?php require_once('crud_professor.php');?>
+    <?php include 'navbar.html'; ?>
+    
+    <?php                      
+    
+    if(isset($_POST['enviarProfessorForm'])) {
+        
+        // variáveis recebem os valores do formulário
+        $nome = $_POST['nomeProfessor'];
+        $cpf = $_POST['cpfProfessor'];
+        $maiorTit = $_POST['maiorTitProfessor'];
+        $area = $_POST['areaFormacaoProfessor'];
+        $link = $_POST['linkLattesProfessor'];
+        $ult = $_POST['dataUltAtualizacaoProfessor'];
+        
+        
+        // Se não estiverem vazias...
+        if (!$nome="" || !$cpf="" || !$maiorTit="" || !$area="" || !$link="" || !$ult="") {
+            // prepara a String com o camando SQL
+            $sql_final = "INSERT INTO PROFESSORES (NOME, CPF, MAIORTITULACAO, AREAFORMACAO, LINKLATTES, DATAATUALIZACAO) VALUES ('$nome', '$cpf', '$maiorTit', '$area', '$link', '$ult')";
+            
+            // chama a função para inserir, passando a String com os comandos
+            insert_professor($sql_final);
+            unset($_POST['enviarProfessorForm']);
+        } else {
+            echo "erro na inclusão de professor!";
+        }
+        
+    }
+    ?>
+    
     <!-- Page Content -->
     <div class="container">
+        <!-- Identificação do Curso -->
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-xs-12">
                 <h1 class="page-header">Cadastro de Professor</h1>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-xs-12">
-                <form class="well">
+            <div class="col-xs-12">        
+                <form id="professorForm" class="well" method="POST" enctype="multipart/form-data" action="">
                     <fieldset>
                         <legend>Dados Pessoais</legend>
                     <div class="form-group col-xs-8">
                         <label for="nomeProfessor">Nome</label>
-                        <input type="text" class="form-control" id="nomeProfessor" placeholder="nome completo">
+                        <input type="text" class="form-control" name="nomeProfessor" placeholder="nome completo">
                     </div>
 
                     <div class="form-group col-xs-4">
                         <label for="cpfProfessor">CPF</label>
-                        <input type="text" class="form-control" id="cpfProfessor" placeholder="">
+                        <input type="text" class="form-control" name="cpfProfessor" placeholder="">
                     </div>
 
                     <div class="form-group col-xs-6">
                         <label for="maiorTitulacaoProfessor">Maior Titulação</label>
-                        <input type="text" class="form-control" id="maiorTitulacaoprofessor" placeholder="">
+<!--                        <input type="text" class="form-control" id="maiorTitulacaoprofessor" placeholder="">-->
+                            <select class="form-control" name="maiorTitProfessor">
+                                <option value="Graduação">Graduação</option>
+                                <option value="Especialização Lato Sensu">Especialização Lato Sensu</option>
+                                <option value="Especialização Stricto Sensu">Especialização Stricto Sensu</option>
+                                <option value="Mestrado">Mestrado</option>
+                                <option value="Doutorado">Doutorado</option>
+                                <option value="Pós-Doutorado">Pós-Doutorado</option>
+                            </select>
                     </div>
 
                     <div class="form-group col-xs-6">
                         <label for="areaFormacaoProfessor">Área de Formação</label>
-                        <input type="text" class="form-control" id="maiorTitulacaoProfessor" placeholder="">
+                        <input type="text" class="form-control" name="areaFormacaoProfessor" placeholder="">
                     </div>
 
                     <div class="form-group col-xs-8">
                         <label for="linkLattesProfessor">Curriculum Lattes (link)</label>
-                        <input type="url" class="form-control" id="linkLattesProfessor" placeholder="www.url.com.br">
+                        <input type="url" class="form-control" name="linkLattesProfessor" placeholder="https://www.url.com.br">
                     </div>
 
                     <div class="form-group col-xs-4">
                         <label for="dataAtualizacaoProfessor">Data da última atualização</label>
-                        <input type="date" class="form-control" id="linkLattesProfessor" placeholder="">
+                        <input type="date" class="form-control" name="dataUltAtualizacaoProfessor" placeholder="">
                     </div>
                     </fieldset>
 
                 </form>
             </div>
         </div>
-        
-        <ul id="cadastroProfessorTabs" class="nav nav-tabs" data-tabs="cadastroProfessorTabs">
-            <li class="active"><a href="#atuacaoIESGeral" data-toggle="tab">Geral</a></li>
-            <li><a href="#atuacaoIESProfissional" data-toggle="tab">Atuação Profissional</a></li>
-            <li><a href="#atuacaoIESPublicacoes" data-toggle="tab">Publicações</a></li>
-        </ul>
-        
-        <div id="my-tab-content" class="tab-content">
-            <div class="tab-pane active" id="atuacaoIESGeral">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <form class="well">
-                            <fieldset>
-                                <div class="form-group col-xs-3">
-                                    <label for="matriculaProfessor">Matricula</label>
-                                    <input type="text" class="form-control" id="matriculaProfessor" placeholder="123456678">
-                                </div>
-
-                                <div class="form-group col-xs-2">
-                                    <label for="dataAdmissaoProfessor">Data de admissão</label>
-                                    <input type="date" class="form-control" id="dataAdmissaoProfessor" placeholder="">
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-xs-12">
-                        <form class="form-horizontal well">
-                            
-                            <fieldset>
-                                <legend>Informe a quantidade de horas das atividades</legend>
-                                <div class="col-xs-4">
-                                    
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputHorasNDE" placeholder="01">
-                                        </div>
-                                        <label for="inputHorasNDE" class="control-label">NDE</label>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputHorasTCC" placeholder="01">
-                                        </div>
-                                        <label for="inputHorasTCC" class="control-label">Orientação TCC</label>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputHorasCoordenacao" placeholder="01">
-                                        </div>
-                                        <label for="inputHorasCoordenacao" class="control-label">Coordenação Curso</label>
-                                    </div>
-                                    
-                                </div>
-                                
-                                <div class="col-xs-4">                       
-                                    
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputHorasCoordenacaoOutros" placeholder="01">
-                                        </div>
-                                        <label for="inputHorasCoordenacaoOutros" class="control-label">Coordenação Outros Cursos</label>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputPesquisa" placeholder="01">
-                                        </div>                                
-                                        <label for="inputPesquisa" class="control-label">Pesquisa (semestre atual)</label>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputAtividadeExtraCurso" placeholder="01">
-                                        </div>
-                                        <label for="inputAtividadeExtraCurso" class="control-label">Atividades extra classe no curso</label>
-                                    </div>
-                                    
-                                </div>
-                                
-                                <div class="col-xs-4">
-
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputAtvidadeExtraOutros" placeholder="01">
-                                        </div>
-                                        <label for="inputAtividadeExtraOutros" class="control-label">Atividade extra classe em outros cursos</label>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <div class="col-xs-3">
-                                            <input type="text" class="form-control" id="inputQuantidadeHorasCurso" placeholder="01">
-                                        </div>
-                                        <label for="inputQuantidadeHorasCurso" class="control-label">Qtde de horas no curso</label>
-                                    </div>
-                                    
-                                    
-                                <div class="form-group">
-                                    <div class="col-xs-3">
-                                        <input type="text" class="form-control" id="inputQuantidadeHorasOutros" placeholder="01">
-                                    </div>
-                                    <label for="inputQuantidadeHorasOutros" class="control-label">Qtde de horas outros cursos</label>
-                                </div>
-                                
-                                </div>
-                                
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-6 ">
-                        <p class="text-center">Disciplinas ministradas no curso</p>
-                        <ul class="list-group">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Morbi leo risus</li>
-                            <li class="list-group-item">Porta ac consectetur ac</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="col-xs-6 ">
-                        <p class="text-center">Disciplinas ministradas em outros cursos</p>
-                        <ul class="list-group">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Morbi leo risus</li>
-                            <li class="list-group-item">Porta ac consectetur ac</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="tab-pane" id="atuacaoIESProfissional">
-                <div class="row">
-                    <div class="col-xs-12">
-
-                        <form class="form-horizontal well">
-                            
-                            <div class="form-group">
-                                <div class="col-xs-4">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> Membro NDE?
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-xs-4">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> Membro Colegiado?
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-xs-4">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> Docente com formação/capacitação/experiência pedagógica?
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </form>
-
-                        <hr />
-                        <p class="text-center">O sistema irá calcular o tempo em anos e meses, a partir da diferença com a data inicial</p>
-
-                            <form class="form-inline well">
-                                <fieldset>
-                                    <legend>Tempo de vinculo ininterrupto do docente com o curso</legend>
-                                    <div class="form-group col-xs-4">
-                                        <label for="dataVinculoCurso">Data inicial</label>
-                                        <input type="date" class="form-control" id="dataVinculoCurso" placeholder="">
-                                    </div>
-                                </fieldset>
-
-                                <fieldset>
-                                    <legend>Tempo de experiência no magistério superior</legend>
-                                    <div class="form-group col-xs-4">
-                                        <label for="dataExperienciaMagisterio">Data Inicial</label>
-                                        <input type="date" class="form-control" id="dataExperienciaMagisterio" placeholder="">
-                                    </div>                                 
-                                </fieldset>
-
-                                <fieldset>
-                                    <legend>Tempo de experiência em cursos a distância</legend>
-                                    <div class="form-group col-xs-4">
-                                        <label for="dataExperienciaCursoDistancia">Data Inicial</label>
-                                        <input type="date" class="form-control" id="dataExperienciaCursoDistancia" placeholder="">
-                                    </div>                                 
-                                </fieldset>
-
-                                <fieldset>
-                                    <legend>Tempo de experiência profissional</legend>
-                                    <div class="form-group col-xs-4">
-                                        <label for="dataExperienciaProfissional">Data Inicial</label>
-                                        <input type="date" class="form-control" id="dataExperienciaProfissional" placeholder="">
-                                    </div>                                 
-                                </fieldset>
-
-                                
-                            </form>
-                            <p class="text-center">Participação em Eventos</p>
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <a class="btn btn-default" href="#" role="button">
-                                        <span class="glyphicon glyphicon-plus"></span>
-                                    </a>
-                                    <a class="btn btn-default" href="#" role="button">
-                                        <span class="glyphicon glyphicon-minus"></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="list-group">
-                                <li class="list-group-item">Cras justo odio</li>
-                                <li class="list-group-item">Dapibus ac facilisis in</li>
-                                <li class="list-group-item">Morbi leo risus</li>
-                                <li class="list-group-item">Porta ac consectetur ac</li>
-                                <li class="list-group-item">Vestibulum at eros</li>
-                            </ul>
-                        </div>
-                    </div>
-            </div>
-
-            <div class="tab-pane" id="atuacaoIESPublicacoes">
-
-                <div class="row">
-                    <div class="col-xs-12">
-                        <form class="form-horizontal well">
-                            
-                            <fieldset class="col-xs-6">
-                                <legend>Artigos publicados em periódicos científicos</legend>
-                                
-                                <div class="form-group">
-                                    <div class="col-xs-2">
-                                        <input type="text" class="form-control" id="inputArtigosPublicadosArea" placeholder="01">
-                                    </div>
-                                    <label for="inputArtigosPublicadosArea" class="control-label">na área</label>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <div class="col-xs-2">
-                                        <input type="text" class="form-control" id="inputArtigosPublicadosOutras" placeholder="01">
-                                    </div>
-                                    <label for="inputArtigosPublicadosOutras" class="control-label">em outras áreas</label>
-                                </div>
-                            </fieldset>                                   
-                            
-                            <fieldset class="col-xs-6">
-                                <legend>Livros ou Capítulos</legend>
-                                
-                                <div class="form-group">
-                                    <div class="col-xs-2">
-                                        <input type="text" class="form-control" id="inputLivrosPublicadosArea" placeholder="01">
-                                    </div>
-                                    <label for="inputLivrosPublicadosArea" class="control-label">na área</label>
-                                </div>
-                                    
-                                <div class="form-group">
-                                    <div class="col-xs-2">
-                                        <input type="text" class="form-control" id="inputLivrosPublicadosOutras" placeholder="01">
-                                    </div>
-                                    <label for="inputLivrosPublicadosOutras" class="control-label">em outras áreas</label>
-                                </div>
-                            </fieldset>                                   
-                            
-                            <fieldset class="col-xs-6">
-                                <legend>Trabalhos publicados em anais</legend>
-                                    
-                                <div class="form-group">
-                                    <div class="col-xs-2">
-                                        <input type="text" class="form-control" id="inputTrabalhosCompletos" placeholder="01">
-                                    </div>
-                                    <label for="inputTrabalhosCompletos" class="control-label">completos</label>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <div class="col-xs-2">
-                                        <input type="text" class="form-control" id="inputTrabalhosResumos" placeholder="01">
-                                    </div>
-                                    <label for="inputTrabalhosResumos" class="control-label">resumos</label>
-                                </div>
-                            </fieldset>                                   
-                            
-                            <fieldset class="col-xs-6">
-                                <legend>Propriedade Intelectual</legend>
-                                
-                                <div class="form-group">
-                                    <div class="col-xs-2">
-                                        <input type="text" class="form-control" id="inputPropriedadeDepositada" placeholder="01">
-                                    </div>
-                                    <label for="inputPropriedadeDepositada" class="control-label">depositada</label>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <div class="col-xs-2">
-                                        <input type="text" class="form-control" id="inputPropriedadeRegistrada" placeholder="01">
-                                    </div>
-                                    <label for="inputPropriedadeRegistrada" class="control-label">registrada</label>
-                                </div>
-                            </fieldset>                                   
-                            
-                            <fieldset class-"col-xs-6">
-                                <legend>Outras publicações</legend>
-                                
-                                <div class="form-group col-xs-6">
-                                    <div class="col-xs-2">
-                                        <input type="text" class="form-control" id="inputTraducoes" placeholder="01">
-                                    </div>
-                                    <label for="inputTraducoes" class="control-label">Traduções de livros, capítulos de livros ou artigos publicados</label>
-                                </div>
-                                
-                                <div class="form-group col-xs-6">
-                                    <div class="col-xs-2">
-                                        <input type="text" class="form-control" id="inputProjetos" placeholder="01">
-                                    </div>
-                                    <label for="inputProjetos" class="control-label">Projetos e/ou produções técnicos artísticos e culturais</label>
-                                </div>
-                                
-                                <div class="form-group col-xs-6">
-                                    <div class="col-xs-2">
-                                        <input type="text" class="form-control" id="inputProducao" placeholder="01">
-                                    </div>
-                                    <label for="inputProducao" class="control-label">Produção didático-pedagógica relevante, publicada ou não</label>
-                                </div>
-                            </fieldset>                                   
-                            
-                        </form>
-                    </div>
-                </div>
-
-            <div class="row">
-                <div class="col-xs-12">
-                    <p class="">Anexar comprovantes</p>
-                    
-                    <a class="btn btn-default" href="#" role="button">
-                        <span class="glyphicon glyphicon-plus"></span>
-                    </a>
-                    <a class="btn btn-default" href="#" role="button">
-                        <span class="glyphicon glyphicon-minus"></span>
-                    </a>
-                </div>
-            </div>
-            <ul class="list-group">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-            
-            
-            </div>
+    
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-xs-12">
                 <hr />
-            
-                <button type="button" class="btn btn-primary">Salvar</button>
-                <button type="button" class="btn btn-danger">Cancelar</button>
-            
+                    <a href="index.php" type="button" class="btn btn-danger">Cancelar</a>
+                    <input type="submit" form="professorForm" class="btn btn-primary" name="enviarProfessorForm" value="Salvar">
                 <hr />
             </div>
         </div>
-        </div>
+            
     </div>
-
+    
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-    
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 </body>
