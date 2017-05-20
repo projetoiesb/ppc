@@ -103,54 +103,6 @@ Autor: Vinícius Barth
                 <input type="submit" form="professorForm" class="btn btn-primary" name="enviarProfessorForm" value="Consultar">
             </div>
         </div>
-
-<!--        <div class="row">
-            <div class="col-xs-12">        
-                <form id="professorForm" class="well" method="POST" enctype="multipart/form-data" action="">
-                    <fieldset>
-                        <legend>Dados Pessoais</legend>
-                    <div class="form-group col-xs-8">
-                        <label for="nomeProfessor">Nome</label>
-                        <input type="text" class="form-control" name="nomeProfessor" placeholder="nome completo">
-                    </div>
-
-                    <div class="form-group col-xs-4">
-                        <label for="cpfProfessor">CPF</label>
-                        <input type="text" class="form-control" name="cpfProfessor" placeholder="">
-                    </div>
-
-                    <div class="form-group col-xs-6">
-                        <label for="maiorTitulacaoProfessor">Maior Titulação</label>
-                        <input type="text" class="form-control" id="maiorTitulacaoprofessor" placeholder="">
-                            <select class="form-control" name="maiorTitProfessor">
-                                <option value="Graduação">Graduação</option>
-                                <option value="Especialização Lato Sensu">Especialização Lato Sensu</option>
-                                <option value="Especialização Stricto Sensu">Especialização Stricto Sensu</option>
-                                <option value="Mestrado">Mestrado</option>
-                                <option value="Doutorado">Doutorado</option>
-                                <option value="Pós-Doutorado">Pós-Doutorado</option>
-                            </select>
-                    </div>
-
-                    <div class="form-group col-xs-6">
-                        <label for="areaFormacaoProfessor">Área de Formação</label>
-                        <input type="text" class="form-control" name="areaFormacaoProfessor" placeholder="">
-                    </div>
-
-                    <div class="form-group col-xs-8">
-                        <label for="linkLattesProfessor">Curriculum Lattes (link)</label>
-                        <input type="url" class="form-control" name="linkLattesProfessor" placeholder="https://www.url.com.br">
-                    </div>
-
-                    <div class="form-group col-xs-4">
-                        <label for="dataAtualizacaoProfessor">Data da última atualização</label>
-                        <input type="date" class="form-control" name="dataUltAtualizacaoProfessor" placeholder="">
-                    </div>
-                    </fieldset>
-
-                </form>
-            </div>
-        </div>-->
          
     </div>
     
