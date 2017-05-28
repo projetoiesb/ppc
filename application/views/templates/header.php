@@ -47,34 +47,34 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu Principal <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="#">Avaliação de Cursos</a>
+                                    <a href="/avaliacoes">Avaliação de Cursos</a>
                                 </li>
                                 <li>
                                     <a href="/atas">Atas de Reunião</a>
                                 </li>
                                 <li>
-                                    <a href="#">Bibliografias</a>
+                                    <a href="/bibliografias">Bibliografias</a>
                                 </li>
                                 <li>
-                                    <a href="#">Cursos</a>
+                                    <a href="/cursos">Cursos</a>
                                 </li>
                                 <li>
-                                    <a href="#">Cronogramas de Atividades</a>
+                                    <a href="/cronogramas">Cronogramas de Atividades</a>
                                 </li>
                                 <li>
-                                    <a href="#">Disciplinas</a>
+                                    <a href="/disciplinas">Disciplinas</a>
                                 </li>
                                 <li>
-                                    <a href="#">Matrizes Curriculares</a>
+                                    <a href="/matrizes">Matrizes Curriculares</a>
                                 </li>
                                 <li>
-                                    <a href="#">Planos de Ensino</a>
+                                    <a href="/planos">Planos de Ensino</a>
                                 </li>
                                 <li>
-                                    <a href="#">Professores</a>
+                                    <a href="/professores">Professores</a>
                                 </li>
                                 <li>
-                                    <a href="#">Projetos Pedagógicos</a>
+                                    <a href="/ppcs">Projetos Pedagógicos</a>
                                 </li>
                             </ul>
                         <li>
