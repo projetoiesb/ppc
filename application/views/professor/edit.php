@@ -1,23 +1,29 @@
-<h3>Nova ata</h3>
+<h3>Editar professor</h3>
 
 <?php echo validation_errors(); ?>
 
-<?php echo form_open('atas/edit/'.$ata_item[0]['ata_id']); ?>
+<?php echo form_open('professores/edit/'.$professor_item[0]['prof_id']); ?>
 
-    <p>ID: <?php echo $ata_item[0]['ata_id']; ?></p>
+    <p>ID: <?php echo $professor_item[0]['prof_id']; ?></p>
 
-    <label for="ataData">Data</label>
-    <input type="date" name="ataData" value="<?php echo $ata_item[0]['ata_date']; ?>"/><br />
+    <label for="profNome">Nome</label>
+    <input name="profNome" value="<?php echo $professor_item[0]['prof_name']; ?>"/><br />
 
-    <label for="ataLocal">Local</label>
-    <input name="ataLocal" value="<?php echo $ata_item[0]['ata_local']; ?>" /><br />
+    <label for="profCpf">CPF</label>
+    <input name="profCpf" value="<?php echo $professor_item[0]['prof_cpf']; ?>"/><br />
 
-    <label for="ataPartic">Participantes</label>
-    <textarea name="ataPartic"><?php echo $ata_item[0]['ata_participants']; ?></textarea><br />
+    <label for="profTitulo">Maior titulação</label>
+    <input name="profTitulo" value="<?php echo $professor_item[0]['prof_greatTitle']; ?>"/><br />
 
-    <label for="ataDelib">Deliberação</label>
-    <textarea name="ataDelib"><?php echo $ata_item[0]['ata_deliberations']; ?></textarea><br />
+    <label for="profAreaForm">Area de formação</label>
+    <input name="profAreaForm" value="<?php echo $professor_item[0]['prof_areaFormation']; ?>"/><br />
 
-    <input type="submit" name="submit" value="Atualizar item" />
+    <label for="profLink">Link curriculum Lattes</label>
+    <input type="url" name="profLink" value="<?php echo $professor_item[0]['prof_linkLattes']; ?>"/><br />
+
+    <label for="profAtualiza">Ultima atualização</label>
+    <input type="date" name="profAtualiza" value="<?php echo $professor_item[0]['prof_lastUpdate']; ?>"/><br />
+
+    <input type="submit" name="submit" value="Atualizar" />
 
 </form>

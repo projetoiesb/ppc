@@ -23,10 +23,12 @@ class Professores extends CI_Controller {
             $this->load->library('form_validation');
 
             // Estas funções aceitam 3 parametros: nome do campo, nome Human Readable, regras
-            $this->form_validation->set_rules('ataData', 'Data', 'required');
-            $this->form_validation->set_rules('ataLocal', 'Local', 'required');
-            $this->form_validation->set_rules('ataPartic', 'Participantes', 'required');
-            $this->form_validation->set_rules('ataDelib', 'Deliberação', 'required');
+            $this->form_validation->set_rules('profNome', 'Nome', 'required');
+            $this->form_validation->set_rules('profCpf', 'CPF', 'required');
+            $this->form_validation->set_rules('profTitulo', 'Maior titulação', 'required');
+            $this->form_validation->set_rules('profAreaForm', 'Area de formação', 'required');
+            $this->form_validation->set_rules('profLink', 'Link Lattes', 'required');
+            $this->form_validation->set_rules('profAtualiza', 'Última atualização', 'required');
 
             if ($this->form_validation->run() === FALSE)
             {
@@ -68,10 +70,12 @@ class Professores extends CI_Controller {
             $data['professor_item'] = $this->professor_model->get_item($id);
 
             // Estas funções aceitam 3 parametros: nome do campo, nome Human Readable, regras
-            $this->form_validation->set_rules('ataData', 'Data', 'required');
-            $this->form_validation->set_rules('ataLocal', 'Local', 'required');
-            $this->form_validation->set_rules('ataPartic', 'Participantes', 'required');
-            $this->form_validation->set_rules('ataDelib', 'Deliberação', 'required');
+            $this->form_validation->set_rules('profNome', 'Nome', 'required');
+            $this->form_validation->set_rules('profCpf', 'CPF', 'required');
+            $this->form_validation->set_rules('profTitulo', 'Maior titulação', 'required');
+            $this->form_validation->set_rules('profAreaForm', 'Area de formação', 'required');
+            $this->form_validation->set_rules('profLink', 'Link Lattes', 'required');
+            $this->form_validation->set_rules('profAtualiza', 'Última atualização', 'required');
 
             if ($this->form_validation->run() === FALSE)
             {

@@ -26,17 +26,16 @@ class Ppcs extends CI_Controller {
             $data['curso'] = $this->curso_model->get_list();
 
             // Estas funções aceitam 3 parametros: nome do campo, nome Human Readable, regras
-            $this->form_validation->set_rules('cursoTipo', 'Tipo do curso', 'required');
-            $this->form_validation->set_rules('cursoModalidade', 'Modalidade', 'required');
-            $this->form_validation->set_rules('cursoNome', 'Nome do curso', 'required');
-            $this->form_validation->set_rules('cursoHabilitacao', 'Habilitacao', 'required');
-            $this->form_validation->set_rules('cursoLocal', 'Local de oferta', 'required');
-            $this->form_validation->set_rules('cursoTurnos', 'Turnos', 'required');
-            $this->form_validation->set_rules('cursoVagas', 'Vagas', 'required');
-            $this->form_validation->set_rules('cursoCarga', 'Carga horária', 'required');
-            $this->form_validation->set_rules('cursoRegime', 'Regime', 'required');
-            $this->form_validation->set_rules('cursoPeriodo', 'Periodos', 'required');
-            $this->form_validation->set_rules('cursoCoord', 'Coordenador do curso', 'required');
+            $this->form_validation->set_rules('curso', 'Curso', 'required');
+            $this->form_validation->set_rules('ppcCursoPerfil', 'Perfil do curso', 'required');
+            $this->form_validation->set_rules('ppcEgressoPerfil', 'Perfil do egresso', 'required');
+            $this->form_validation->set_rules('ppcAcessoCurso', 'Forma de acesso ao curso', 'required');
+            $this->form_validation->set_rules('ppcRepresentacao', 'Representação gráfica de um perfil de formação', 'required');
+            $this->form_validation->set_rules('ppcAvalEnsino', 'Sistema de avaliação do processo Ensino-Aprendizagem', 'required');
+            $this->form_validation->set_rules('ppcAvalCurso', 'Sistema de avaliação do projeto do curso', 'required');
+            $this->form_validation->set_rules('ppcTcc', 'Trabalho de conclusão de curso', 'required');
+            $this->form_validation->set_rules('ppcEstagio', 'Trabalho de conclusão de curso', 'required');
+            $this->form_validation->set_rules('ppcPda', 'Politica de atendimento a pessoas com deficiência e/ou mobilidade reduzida', 'required');
 
             if ($this->form_validation->run() === FALSE)
             {
@@ -75,13 +74,19 @@ class Ppcs extends CI_Controller {
             $this->load->library('form_validation');
 
                 $data['ppc_item'] = $this->ppc_model->get_item($id);
-                $data['curso'] = $this->curso_model->get_list();;
+                $data['curso'] = $this->curso_model->get_list();
 
             // Estas funções aceitam 3 parametros: nome do campo, nome Human Readable, regras
-            $this->form_validation->set_rules('ataData', 'Data', 'required');
-            $this->form_validation->set_rules('ataLocal', 'Local', 'required');
-            $this->form_validation->set_rules('ataPartic', 'Participantes', 'required');
-            $this->form_validation->set_rules('ataDelib', 'Deliberação', 'required');
+            $this->form_validation->set_rules('curso', 'Curso', 'required');
+            $this->form_validation->set_rules('ppcCursoPerfil', 'Perfil do curso', 'required');
+            $this->form_validation->set_rules('ppcEgressoPerfil', 'Perfil do egresso', 'required');
+            $this->form_validation->set_rules('ppcAcessoCurso', 'Forma de acesso ao curso', 'required');
+            $this->form_validation->set_rules('ppcRepresentacao', 'Representação gráfica de um perfil de formação', 'required');
+            $this->form_validation->set_rules('ppcAvalEnsino', 'Sistema de avaliação do processo Ensino-Aprendizagem', 'required');
+            $this->form_validation->set_rules('ppcAvalCurso', 'Sistema de avaliação do projeto do curso', 'required');
+            $this->form_validation->set_rules('ppcTcc', 'Trabalho de conclusão de curso', 'required');
+            $this->form_validation->set_rules('ppcEstagio', 'Trabalho de conclusão de curso', 'required');
+            $this->form_validation->set_rules('ppcPda', 'Politica de atendimento a pessoas com deficiência e/ou mobilidade reduzida', 'required');
 
             if ($this->form_validation->run() === FALSE)
             {

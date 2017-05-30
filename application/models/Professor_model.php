@@ -46,10 +46,12 @@
             $this->load->helper('url');
 
             $data = array(
-               'ata_date' => $this->input->post('ataData'),
-               'ata_local' => $this->input->post('ataLocal'),
-               'ata_participants' => $this->input->post('ataPartic'),
-               'ata_deliberations' => $this->input->post('ataDelib'),
+               'prof_name' => $this->input->post('profNome'),
+               'prof_cpf' => $this->input->post('profCpf'),
+               'prof_greatTitle' => $this->input->post('profTitulo'),
+               'prof_areaFormation' => $this->input->post('profAreaForm'),
+               'prof_linkLattes' => $this->input->post('profLink'),
+               'prof_lastUpdate' => $this->input->post('profAtualiza'),
             );
         
             return $this->db->insert($this->table, $data);
@@ -62,10 +64,12 @@
             $this->load->helper('url');
  
             $data = array(
-               'ata_date' => $this->input->post('ataData'),
-               'ata_local' => $this->input->post('ataLocal'),
-               'ata_participants' => $this->input->post('ataPartic'),
-               'ata_deliberations' => $this->input->post('ataDelib'),
+               'prof_name' => $this->input->post('profNome'),
+               'prof_cpf' => $this->input->post('profCpf'),
+               'prof_greatTitle' => $this->input->post('profTitulo'),
+               'prof_areaFormation' => $this->input->post('profAreaForm'),
+               'prof_linkLattes' => $this->input->post('profLink'),
+               'prof_lastUpdate' => $this->input->post('profAtualiza'),
             );
         
             if ($id == 0) {

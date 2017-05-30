@@ -42,17 +42,16 @@
             $this->load->helper('url');
 
             $data = array(
-               'curso_type' => $this->input->post('cursoTipo'),
-               'curso_modality' => $this->input->post('cursoModalidade'),
-               'curso_name' => $this->input->post('cursoNome'),
-               'curso_license' => $this->input->post('cursoHabilitacao'),
-               'curso_offerLocal' => $this->input->post('cursoLocal'),
-               'curso_turns' => $this->input->post('cursoTurnos'),
-               'curso_vacancies' => $this->input->post('cursoVagas'),
-               'curso_workload' => $this->input->post('cursoCarga'),
-               'curso_regime' => $this->input->post('cursoRegime'),
-               'curso_periods' => $this->input->post('cursoPeriodo'),
-               'prof_id' => $this->input->post('cursoCoord'),
+               'curso_id' => $this->input->post('curso'),
+               'ppc_courseProfile' => $this->input->post('ppcCursoPerfil'),
+               'ppc_egressProfile' => $this->input->post('ppcEgressoPerfil'),
+               'ppc_courseAccess' => $this->input->post('ppcAcessoCurso'),
+               'ppc_formation' => $this->input->post('ppcRepresentacao'),
+               'ppc_teachingEvaluation' => $this->input->post('ppcAvalEnsino'),
+               'ppc_projectEvaluation' => $this->input->post('ppcAvalCurso'),
+               'ppc_conclusion' => $this->input->post('ppcTcc'),
+               'ppc_trainee' => $this->input->post('ppcEstagio'),
+               'ppc_pad' => $this->input->post('ppcPda'),
             );
             return $this->db->insert($this->table, $data);
         }
@@ -64,17 +63,16 @@
             $this->load->helper('url');
  
             $data = array(
-               'curso_type' => $this->input->post('cursoTipo'),
-               'curso_modality' => $this->input->post('cursoModalidade'),
-               'curso_name' => $this->input->post('cursoNome'),
-               'curso_license' => $this->input->post('cursoHabilitacao'),
-               'curso_offerLocal' => $this->input->post('cursoLocal'),
-               'curso_turns' => $this->input->post('cursoTurnos'),
-               'curso_vacancies' => $this->input->post('cursoVagas'),
-               'curso_workload' => $this->input->post('cursoCarga'),
-               'curso_regime' => $this->input->post('cursoRegime'),
-               'curso_periods' => $this->input->post('cursoPeriodo'),
-               'prof_id' => $this->input->post('cursoCoord'),
+               'curso_id' => $this->input->post('curso'),
+               'ppc_courseProfile' => $this->input->post('ppcCursoPerfil'),
+               'ppc_egressProfile' => $this->input->post('ppcEgressoPerfil'),
+               'ppc_courseAccess' => $this->input->post('ppcAcessoCurso'),
+               'ppc_formation' => $this->input->post('ppcRepresentacao'),
+               'ppc_teachingEvaluation' => $this->input->post('ppcAvalEnsino'),
+               'ppc_projectEvaluation' => $this->input->post('ppcAvalCurso'),
+               'ppc_conclusion' => $this->input->post('ppcTcc'),
+               'ppc_trainee' => $this->input->post('ppcEstagio'),
+               'ppc_pad' => $this->input->post('ppcPda'),
             );
         
             if ($id == 0) {

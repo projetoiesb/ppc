@@ -78,10 +78,17 @@ class Cursos extends CI_Controller {
             $data['coordenador'] = $this->professor_model->get_list();
 
             // Estas funções aceitam 3 parametros: nome do campo, nome Human Readable, regras
-            $this->form_validation->set_rules('ataData', 'Data', 'required');
-            $this->form_validation->set_rules('ataLocal', 'Local', 'required');
-            $this->form_validation->set_rules('ataPartic', 'Participantes', 'required');
-            $this->form_validation->set_rules('ataDelib', 'Deliberação', 'required');
+            $this->form_validation->set_rules('cursoTipo', 'Tipo do curso', 'required');
+            $this->form_validation->set_rules('cursoModalidade', 'Modalidade', 'required');
+            $this->form_validation->set_rules('cursoNome', 'Nome do curso', 'required');
+            $this->form_validation->set_rules('cursoHabilitacao', 'Habilitacao', 'required');
+            $this->form_validation->set_rules('cursoLocal', 'Local de oferta', 'required');
+            $this->form_validation->set_rules('cursoTurnos', 'Turnos', 'required');
+            $this->form_validation->set_rules('cursoVagas', 'Vagas', 'required');
+            $this->form_validation->set_rules('cursoCarga', 'Carga horária', 'required');
+            $this->form_validation->set_rules('cursoRegime', 'Regime', 'required');
+            $this->form_validation->set_rules('cursoPeriodo', 'Periodos', 'required');
+            $this->form_validation->set_rules('cursoCoord', 'Coordenador do curso', 'required');
 
             if ($this->form_validation->run() === FALSE)
             {
