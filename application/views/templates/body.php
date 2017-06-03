@@ -6,7 +6,7 @@
                 <h2 class="page-header">Módulos do Sistema - PPC</h2>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
-                <a href="cursos">
+                <a href="index.php/cursos">
                     <img class="img-circle img-responsive img-center"
                          src="img/icons/courses.png"
                          width="200"
@@ -17,7 +17,7 @@
                 <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
-                <a href="professores">
+                <a href="index.php/professores">
                     <img class="img-circle img-responsive img-center"
                          src="img/icons/teachers.png"
                          width="200"
@@ -28,7 +28,7 @@
                 <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
-                <a href="disciplinas">
+                <a href="index.php/disciplinas">
                     <img class="img-circle img-responsive img-center"
                          src="img/icons/teachers.png"
                          width="200"
@@ -39,7 +39,7 @@
                 <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
-                <a href="matrizes">
+                <a href="index.php/matrizes">
                     <img class="img-circle img-responsive img-center"
                          src="img/icons/teachers.png"
                          width="200"
@@ -51,7 +51,7 @@
             </div>
 
             <div class="col-lg-4 col-sm-6 text-center">
-                <a href="planos">
+                <a href="index.php/planos">
                     <img class="img-circle img-responsive img-center"
                          src="img/icons/teachers.png"
                          width="200"
@@ -63,7 +63,7 @@
             </div>
 
             <div class="col-lg-4 col-sm-6 text-center">
-                <a href="bibliografias">
+                <a href="index.php/bibliografias">
                     <img class="img-circle img-responsive img-center"
                          src="img/icons/book.png"
                          width="200"
@@ -75,7 +75,7 @@
             </div>
 
             <div class="col-lg-4 col-sm-6 text-center">
-                <a href="atas">
+                <a href="index.php/atas">
                     <img class="img-circle img-responsive img-center"
                          src="img/icons/bibliography.png"
                          width="200"
@@ -87,7 +87,7 @@
             </div>
 
             <div class="col-lg-4 col-sm-6 text-center">
-                <a href="cronogramas">
+                <a href="index.php/cronogramas">
                     <img class="img-circle img-responsive img-center"
                          src="img/icons/schedule.png"
                          width="200"
@@ -99,7 +99,7 @@
             </div>
 
             <div class="col-lg-4 col-sm-6 text-center">
-                <a href="avaliacoes">
+                <a href="index.php/avaliacoes">
                     <img class="img-circle img-responsive img-center"
                          src="img/icons/submit.png"
                          width="200"

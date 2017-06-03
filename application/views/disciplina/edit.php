@@ -1,26 +1,72 @@
-<h3>Nova discip</h3>
-
 <?php echo validation_errors(); ?>
 
 <?php echo form_open('disciplinas/edit/'.$discip_item[0]['discip_id']); ?>
 
-    <p>ID: <?php echo $discip_item[0]['discip_id']; ?></p>
+<div>
+    <div role="document">
+        <div>
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Editar Disciplina</h4>
+            </div>
 
-    <label for="discipNome">Nome</label>
-    <input type="text" name="discipNome" value="<?php echo $discip_item[0]['discip_name']; ?>"/><br />
+            <div class="modal-body">
+                    <input type="hidden" name="id" class="edit-id">
+                    <fieldset>
+                        <legend>Dados da Disciplina</legend>
+                        <div class="form-group col-xs-12">
+                            <label for="inputNomeDisciplina">Nome</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="nome"
+                                   placeholder=""
+                                   value="<?php echo $discip_item[0]['discip_name']; ?>">
+                        </div>
 
-    <label for="discipDesc">Descrição</label>
-    <textarea name="discipDesc"><?php echo $discip_item[0]['discip_description']; ?></textarea><br />
+                        <div class="form-group col-xs-12">
+                            <label for="inputDescricaoDisciplina">Descrição</label>
+                            <textarea class="form-control"
+                                      name="descricao"
+                                      rows="3">
+                                    <?php echo $discip_item[0]['discip_description']; ?>      
+                            </textarea>
+                            
+                        </div>
 
-    <label for="discipCod">Código</label>
-    <input name="discipCod" value="<?php echo $discip_item[0]['discip_code']; ?>"/><br />
+                        <div class="form-group col-xs-3">
+                            <label for="inputCodigoDisciplina">Código</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="codigo"
+                                   id="inputCodigoDisciplina"
+                                   placeholder=""
+                                   value="<?php echo $discip_item[0]['discip_code']; ?>">
+                        </div>
 
-    <label for="discipSemestre">Semestre</label>
-    <input name="discipSemestre" value="<?php echo $discip_item[0]['discip_semester']; ?>"/><br />
+                        <div class="form-group col-xs-6">
+                            <label for="inputSemestreDisciplina">Semestre</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="semestre"
+                                   id="inputSemestreDisciplina"
+                                   placeholder=""
+                                   value="<?php echo $discip_item[0]['discip_semester']; ?>">
+                        </div>
 
-    <label for="discipCarga">Carga Horária</label>
-    <input type="number" name="discipCarga" value="<?php echo $discip_item[0]['discip_workload']; ?>"/><br />
+                        <div class="form-group col-xs-3">
+                            <label for="inputCargaHorariaDisciplina">Carga horária</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="carga_horaria"
+                                   id="inputCargaHorariaDisciplina"
+                                   placeholder=""
+                                   value="<?php echo $discip_item[0]['discip_workload']; ?>">
+                        </div>
 
-    <input type="submit" name="submit" value="Atualizar item" />
-
+                    </fieldset>
+                    <input type="submit" name="submit" value="Salvar atualizações" class="edit-submit-disciplina btn btn-primary"></input>
+                    <button type="button" class="btn btn-default">Cancelar</button>
+            </div>              
+        </div>
+    </div>
+</div>
 </form>

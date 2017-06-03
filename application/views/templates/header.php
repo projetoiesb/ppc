@@ -81,7 +81,7 @@
                             <a href="#">Sobre</a>
                         </li>
                         <li>
-                            <a href="/Migrate">Database</a>
+                            <a href="Migrate">Database</a>
                         </li>
                     </li>
                 </ul>
