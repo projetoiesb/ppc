@@ -210,6 +210,21 @@ class Migration_initial_migration extends CI_Migration {
                 $this->dbforge->create_table('ppc');
 
 
+                // Matriz table
+                $this->dbforge->add_field(array(
+                        'curso_id' => array(
+                                'type' => 'INT',
+                                'constraint' => '11'
+                        ),
+                        'discip_id' => array(
+                                'type' => 'INT',
+                                'constraint' => '11'
+                        ),
+                ));
+                $this->dbforge->add_key('curso_id', TRUE);
+                $this->dbforge->add_key('discip_id', TRUE);
+                $this->dbforge->create_table('curso_disciplina');
+                $this->db->query('ALTER TABLE curso_disciplina ADD UNIQUE INDEX (curso_id, discip_id)');
 
                 $this->load->model('ata_model');
                 $this->ata_model->insert_dummy();
@@ -226,6 +241,8 @@ class Migration_initial_migration extends CI_Migration {
                 $this->load->model('ppc_model');
                 $this->ppc_model->insert_dummy();
 
+                $this->load->model('matriz_model');
+                $this->matriz_model->insert_dummy();
 
         }
 
@@ -233,6 +250,10 @@ class Migration_initial_migration extends CI_Migration {
         {
                 $this->dbforge->drop_table('ata');
                 $this->dbforge->drop_table('disciplina');
+                $this->dbforge->drop_table('professor');
+                $this->dbforge->drop_table('curso');
+                $this->dbforge->drop_table('ppc');
+                $this->dbforge->drop_table('disciplina_curso');
         }
 }
 
