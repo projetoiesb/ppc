@@ -13,35 +13,21 @@
         <div class="row">
             <div class="col-xs-12">        
                     <?php foreach($ppc_item as $item): ?>
-                        <h4>Id:</h4>
-                        <p><?php echo $item['ppc_id']; ?></p> 
-
-                        <h4>Curso:</h4>
-                        <p><?php 
-                                $indice = $item['curso_id'] - 1;
-                                echo $curso[$indice]['curso_name'];
-                           ?>   
+                        <p><strong>Id:</strong> <?php echo $item['ppc_id']; ?></p>
+                        <p><strong>Curso:</strong> <?php 
+                                                       $indice = $item['curso_id'] - 1;
+                                                       echo $curso[$indice]['curso_name'];
+                                                   ?>
                         </p>
-
-                        <h4>Perfil do curso:</h4>
-                        <p><?php echo $item['ppc_courseProfile']; ?></p>
-                        <h4>Perfil do egresso:</h4>
-                        <p><?php echo $item['ppc_egressProfile']; ?></p>
-                        <h4>Forma de acesso ao curso:</h4>
-                        <p><?php echo $item['ppc_courseAccess']; ?></p>
-                        <h4>Representação gráfica de um perfil de formação:</h4>
-                        <p><?php echo $item['ppc_formation']; ?></p>
-                        <h4>Sistema de avaliação do processo Ensino-Aprendizagem:</h4>
-                        <p><?php echo $item['ppc_teachingEvaluation']; ?></p>
-                        <h4>Sistema de avaliação do projeto do curso:</h4>
-                        <p><?php echo $item['ppc_projectEvaluation']; ?></p>
-                        <h4>Trabalho de conclusão de curso:</h4>
-                        <p><?php echo $item['ppc_conclusion']; ?></p>
-                        <h4>Estágio curricular:</h4>
-                        <p><?php echo $item['ppc_trainee']; ?></p>
-                        <h4>Politica de atendimento a pessoas com deficiência e/ou mobilidade reduzida:</h4>
-                        <p><?php echo $item['ppc_pad']; ?></p>
-
+                        <p><strong>Perfil do curso:</strong> <?php echo $item['ppc_courseProfile']; ?></p>
+                        <p><strong>Perfil do egresso:</strong>> <?php echo $item['ppc_egressProfile']; ?></p>
+                        <p><strong>Forma de acesso ao curso:</strong> <?php echo $item['ppc_courseAccess']; ?></p>
+                        <p><strong>Representação gráfica de um perfil de formação:</strong> <?php echo $item['ppc_formation']; ?></p>
+                        <p><strong>Sistema de avaliação do processo Ensino-Aprendizagem:</strong> <?php echo $item['ppc_teachingEvaluation']; ?></p>
+                        <p><strong>Sistema de avaliação do projeto do curso:</strong> <?php echo $item['ppc_projectEvaluation']; ?></p>
+                        <p><strong>Trabalho de conclusão de curso:</strong> <?php echo $item['ppc_conclusion']; ?></p>
+                        <p><strong>Estágio curricular:</strong> <?php echo $item['ppc_trainee']; ?></p>
+                        <p><strong>Politica de atendimento a pessoas com deficiência e/ou mobilidade reduzida:</strong> <?php echo $item['ppc_pad']; ?></p>
                 <?php endforeach; ?>              
             </div>
         </div>           

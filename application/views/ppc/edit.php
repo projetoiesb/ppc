@@ -1,50 +1,88 @@
-<h3>Nova discip</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">  
 
-<?php echo validation_errors(); ?>
+            <h3>Editar Projeto Petagógico do Curso</h3>
 
-<?php echo form_open('ppcs/edit/'.$ppc_item[0]['ppc_id']); ?>
+            <?php echo validation_errors(); ?>
 
-    <p>ID: <?php echo $ppc_item[0]['ppc_id']; ?></p>
+            <?php echo form_open('/ppcs/edit/'.$ppc_item[0]['ppc_id'], ['class' => 'well', 'id' => 'ppcForm']); ?>
 
-    <select name="curso">
-              <?php foreach($curso as $curso_item): ?>
-                  <?php if($ppc_item[0]['curso_id'] == $curso_item['curso_id']) { ?>
-                           <option selected="selected" value="<?php echo $curso_item['curso_id']; ?>"><?php echo $curso_item['curso_name']; ?> </option>
-                    <?php } else { ?>
-                            <option value="<?php echo $curso_item['curso_id']; ?>"><?php echo $curso_item['curso_name']; ?> </option>
-                    <?php } ?>
-                  
-              <?php endforeach; ?> 
-    </select><br />
+            <fieldset>
+                <legend>Dados do PPC</legend>
 
+                <div class="form-group row col-xs-12">
+                <div class="form-group col-xs-4">
+                    <label for="curso">Curso</label>
+                    <select class="form-control" name="curso">
+                        <?php foreach($curso as $curso_item): ?>
+                            <?php if($ppc_item[0]['curso_id'] == $curso_item['curso_id']) { ?>
+                                <option selected="selected" value="<?php echo $curso_item['curso_id']; ?>"><?php echo $curso_item['curso_name']; ?> </option>
+                            <?php } else { ?>
+                                <option value="<?php echo $curso_item['curso_id']; ?>"><?php echo $curso_item['curso_name']; ?> </option>
+                            <?php } ?>
+                        <?php endforeach; ?> 
+                    </select>
+                </div>
+                </div>
 
-    <label for="ppcCursoPerfil">Perfil do curso</label>
-    <textarea name="ppcCursoPerfil"><?php echo $ppc_item[0]['ppc_courseProfile']; ?></textarea><br />
+                <div class="form-group col-xs-6">
+                    <label for="ppcCursoPerfil">Perfil do curso</label>
+                    <textarea class="form-control" name="ppcCursoPerfil" rows="5"><?php echo $ppc_item[0]['ppc_courseProfile']; ?></textarea>
+                </div>
 
-    <label for="ppcEgressoPerfil">Perfil do egresso</label>
-    <textarea name="ppcEgressoPerfil"><?php echo $ppc_item[0]['ppc_egressProfile']; ?></textarea><br />
+                <div class="form-group col-xs-6">
+                    <label for="ppcEgressoPerfil">Perfil do egresso</label>
+                    <textarea class="form-control" name="ppcEgressoPerfil" rows="5"><?php echo $ppc_item[0]['ppc_egressProfile']; ?></textarea>
+                </div>
 
-    <label for="ppcAcessoCurso">Forma de acesso ao curso</label>
-    <textarea name="ppcAcessoCurso"><?php echo $ppc_item[0]['ppc_courseAccess']; ?></textarea><br />
+                <div class="form-group col-xs-6">
+                    <label for="ppcAcessoCurso">Forma de acesso ao curso</label>
+                    <textarea class="form-control" name="ppcAcessoCurso" rows="5"><?php echo $ppc_item[0]['ppc_courseAccess']; ?></textarea>
+                </div>
 
-    <label for="ppcRepresentacao">Representação gráfica de um perfil de formação</label>
-    <textarea name="ppcRepresentacao"><?php echo $ppc_item[0]['ppc_formation']; ?></textarea><br />
+                <div class="form-group col-xs-6">
+                    <label for="ppcRepresentacao">Representação gráfica de um perfil de formação</label>
+                    <textarea class="form-control" name="ppcRepresentacao" rows="5"><?php echo $ppc_item[0]['ppc_formation']; ?></textarea>
+                </div>
 
-    <label for="ppcAvalEnsino">Sistema de avaliação do processo Ensino-Aprendizagem</label>
-    <textarea name="ppcAvalEnsino"><?php echo $ppc_item[0]['ppc_teachingEvaluation']; ?></textarea><br />
+                <div class="form-group col-xs-6">
+                    <label for="ppcAvalEnsino">Avaliação do processo ensino-aprendizagem</label>
+                    <textarea class="form-control" name="ppcAvalEnsino" rows="5"><?php echo $ppc_item[0]['ppc_teachingEvaluation']; ?></textarea>
+                </div>
 
-    <label for="ppcAvalCurso">Sistema de avaliação do projeto do curso</label>
-    <textarea name="ppcAvalCurso"><?php echo $ppc_item[0]['ppc_projectEvaluation']; ?></textarea><br />
+                <div class="form-group col-xs-6">
+                    <label for="ppcAvalCurso">Avaliação do projeto do curso</label>
+                    <textarea class="form-control" name="ppcAvalCurso" rows="5"><?php echo $ppc_item[0]['ppc_projectEvaluation']; ?></textarea>
+                </div>
 
-    <label for="ppcTcc">Trabalho de conclusão de curso</label>
-    <input type="text" name="ppcTcc" value="<?php echo $ppc_item[0]['ppc_conclusion']; ?>"/><br />
+                <div class="form-group col-xs-12">
+                    <label for="ppcPda">Politica de atendimento a pessoas com deficiência e/ou mobilidade reduzida</label>
+                    <textarea class="form-control" name="ppcPda" rows="5"><?php echo $ppc_item[0]['ppc_pad']; ?></textarea>
+                </div>
 
-    <label for="ppcEstagio">Estágio curricular</label>
-    <input type="text" name="ppcEstagio" value="<?php echo $ppc_item[0]['ppc_trainee']; ?>"/><br />
+                <div class="form-group col-xs-6">
+                    <label for="ppcTcc">Trabalho de conclusão de curso</label>
+                    <input class="form-control" type="text" name="ppcTcc" value="<?php echo $ppc_item[0]['ppc_conclusion']; ?>"/>
+                </div>
 
-    <label for="ppcPda">Politica de atendimento a pessoas com deficiência e/ou mobilidade reduzida</label>
-    <textarea name="ppcPda"><?php echo $ppc_item[0]['ppc_pad']; ?></textarea><br />
+                <div class="form-group col-xs-6">
+                    <label for="ppcEstagio">Estágio curricular</label>
+                    <input class="form-control" type="text" name="ppcEstagio" value="<?php echo $ppc_item[0]['ppc_trainee']; ?>"/>
+                </div>
 
-    <input type="submit" name="submit" value="Atualizar item" />
+            </fieldset>
+        </form>
 
-</form>
+        <div class="row">
+            <div class="col-xs-12">
+                <hr />
+                    <a href="/index.php" type="button" class="btn btn-danger">Cancelar</a>
+                    <input type="submit" form="ppcForm" class="btn btn-primary" value="Salvar">
+                <hr />
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
