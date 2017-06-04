@@ -1,23 +1,48 @@
-<h3>Nova ata</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12"> 
 
-<?php echo validation_errors(); ?>
+            <h3>Editar ata</h3>
 
-<?php echo form_open('atas/edit/'.$ata_item[0]['ata_id']); ?>
+            <?php echo validation_errors(); ?>
 
-    <p>ID: <?php echo $ata_item[0]['ata_id']; ?></p>
+            <?php echo form_open('atas/edit/'.$ata_item[0]['ata_id'], ['class' => 'well', 'id' => 'ataForm']); ?>
 
-    <label for="ataData">Data</label>
-    <input type="date" name="ataData" value="<?php echo $ata_item[0]['ata_date']; ?>"/><br />
+                <fieldset>
+                    <legend>Dados da ata</legend>
 
-    <label for="ataLocal">Local</label>
-    <input name="ataLocal" value="<?php echo $ata_item[0]['ata_local']; ?>" /><br />
+                <div class="form-group col-xs-3">
+                    <label for="ataData">Data</label>
+                    <input class="form-control" type="date" name="ataData" value="<?php echo $ata_item[0]['ata_date']; ?>"/>
+                </div>
 
-    <label for="ataPartic">Participantes</label>
-    <textarea name="ataPartic"><?php echo $ata_item[0]['ata_participants']; ?></textarea><br />
+                <div class="form-group col-xs-9">
+                    <label for="ataLocal">Local</label>
+                    <input class="form-control" name="ataLocal" value="<?php echo $ata_item[0]['ata_local']; ?>"/>
+                </div>
 
-    <label for="ataDelib">Deliberação</label>
-    <textarea name="ataDelib"><?php echo $ata_item[0]['ata_deliberations']; ?></textarea><br />
+                <div class="form-group col-xs-12">    
+                    <label for="ataPartic">Participantes</label>
+                    <textarea class="form-control" name="ataPartic"><?php echo $ata_item[0]['ata_participants']; ?></textarea>
+                </div>
 
-    <input type="submit" name="submit" value="Atualizar item" />
+                <div class="form-group col-xs-12">
+                    <label for="ataDelib">Deliberação</label>
+                    <textarea class="form-control" rows="5" name="ataDelib"><?php echo $ata_item[0]['ata_deliberations']; ?></textarea>
+                </div>
+                </fieldset>
 
-</form>
+            </form>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <hr />
+                    <a href="/index.php" type="button" class="btn btn-danger">Cancelar</a>
+                    <input type="submit" form="ataForm" class="btn btn-primary" value="Salvar">
+                <hr />
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>

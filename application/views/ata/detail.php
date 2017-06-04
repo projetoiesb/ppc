@@ -13,16 +13,11 @@
         <div class="row">
             <div class="col-xs-12">        
                     <?php foreach($ata_item as $item): ?>
-                        <h4>Id:</h4>
-                        <p><?php echo $item['ata_id']; ?></p> 
-                        <h4>Data:</h4>
-                        <p><?php echo $item['ata_date']; ?></p>
-                        <h4>Local:</h4>
-                        <p><?php echo $item['ata_local']; ?></p>
-                        <h4>Participantes:</h4>
-                        <p><?php echo $item['ata_participants']; ?></p>
-                        <h4>Deliberação:</h4>
-                        <p><?php echo $item['ata_deliberations']; ?></p>
+                        <p><strong>Id:</strong> <?php echo $item['ata_id']; ?></p>
+                        <p><strong>Data:</strong> <?php echo $item['ata_date']; ?></h4>
+                        <p><strong>Local:</strong> <?php echo $item['ata_local']; ?></p>
+                        <p><strong>Participantes:</strong> <?php echo $item['ata_participants']; ?></p>
+                        <p><strong>Deliberação:</strong> <?php echo $item['ata_deliberations']; ?></p>
                 <?php endforeach; ?>              
 
             </div>
