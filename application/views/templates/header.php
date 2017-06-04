@@ -47,31 +47,31 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu Principal <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="/avaliacoes">Avaliação de Cursos</a>
+                                    <a href="/avaliacoes"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Avaliação de Cursos</a>
                                 </li>
                                 <li>
                                     <a href="/atas">Atas de Reunião</a>
                                 </li>
                                 <li>
-                                    <a href="/bibliografias">Bibliografias</a>
+                                    <a href="/bibliografias"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Bibliografias</a>
                                 </li>
                                 <li>
                                     <a href="/cursos">Cursos</a>
                                 </li>
                                 <li>
-                                    <a href="/cronogramas">Cronogramas de Atividades</a>
+                                    <a href="/cronogramas"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cronogramas de Atividades</a>
                                 </li>
                                 <li>
                                     <a href="/disciplinas">Disciplinas</a>
                                 </li>
                                 <li>
-                                    <a href="/matrizes">Matrizes Curriculares</a>
+                                    <a href="/matrizes"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Matrizes Curriculares</a>
                                 </li>
                                 <li>
-                                    <a href="/planos">Planos de Ensino</a>
+                                    <a href="/planos"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Planos de Ensino</a>
                                 </li>
                                 <li>
-                                    <a href="/professores">Professores</a>
+                                    <a href="/professores"><span class="glyphicon glyphicon-alert" aria-hidden="true"></span> Professores</a>
                                 </li>
                                 <li>
                                     <a href="/ppcs">Projetos Pedagógicos</a>
