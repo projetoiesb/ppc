@@ -1,46 +1,87 @@
-<h3>Nova disciplina</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">   
 
-<?php echo validation_errors(); ?>
+            <h3>Novo curso</h3>
 
-<?php echo form_open('cursos/create'); ?>
+            <?php echo validation_errors(); ?>
 
-    <label for="cursoTipo">Tipo do curso</label>
-    <input type="text" name="cursoTipo" /><br />
+            <?php echo form_open('cursos/create', ['class' => 'well', 'id' => 'cursoForm']); ?>
 
-    <label for="cursoModalidade">Modalidade</label>
-    <input name="cursoModalidade" /><br />
+            <fieldset>
+                <legend>Dados do curso</legend>
 
-    <label for="cursoNome">Denominação do curso</label>
-    <input name="cursoNome"/><br />
+                <div class="form-group col-xs-4">
+                    <label for="cursoTipo">Tipo do curso</label>
+                    <input class="form-control" type="text" name="cursoTipo" />
+                </div>
 
-    <label for="cursoHabilitacao">Habilitação</label>
-    <input name="cursoHabilitacao"/><br />
+                <div class="form-group col-xs-4">
+                    <label for="cursoModalidade">Modalidade</label>
+                    <input class="form-control" name="cursoModalidade" />
+                </div>
 
-    <label for="cursoLocal">Local de oferta</label>
-    <input name="cursoLocal"/><br />
+                <div class="form-group col-xs-4">
+                    <label for="cursoNome">Denominação do curso</label>
+                    <input class="form-control" name="cursoNome"/>
+                </div>
 
-    <label for="cursoTurnos">Turnos de funcionamento</label>
-    <input name="cursoTurnos"/><br />
+                <div class="form-group col-xs-4">
+                    <label for="cursoHabilitacao">Habilitação</label>
+                    <input class="form-control" name="cursoHabilitacao"/>
+                </div>
 
-    <label for="cursoVagas">Número de vagas para cada turno</label>
-    <input type="number" name="cursoVagas"/><br />
+                <div class="form-group col-xs-4">
+                    <label for="cursoLocal">Local de oferta</label>
+                    <input class="form-control" name="cursoLocal"/>
+                </div>
 
-    <label for="cursoCarga">Carga horária</label>
-    <input type="number" name="cursoCarga"/><br />
+                <div class="form-group col-xs-4">
+                    <label for="cursoTurnos">Turnos de funcionamento</label>
+                    <input class="form-control" name="cursoTurnos"/>
+                </div>
 
-    <label for="cursoRegime">Regime letivo</label>
-    <input name="cursoRegime"/><br />
+                <div class="form-group col-xs-3">
+                    <label for="cursoVagas">Número de vagas por turno</label>
+                    <input class="form-control" type="number" name="cursoVagas"/>
+                </div>
 
-    <label for="cursoPeriodo">Períodos</label>
-    <input name="cursoPeriodo"/><br />
+                <div class="form-group col-xs-2">
+                    <label for="cursoCarga">Carga horária</label>
+                    <input class="form-control" type="number" name="cursoCarga"/>
+                </div>
 
-    <label for="cursoCoord">Coordenador do curso</label>
-    <select name="cursoCoord">
-              <?php foreach($coordenador as $coord_item): ?>
-                  <option value="<?php echo $coord_item['prof_id']; ?>"> <?php echo $coord_item['prof_name']; ?> </option> 
-              <?php endforeach; ?> 
-    </select><br />
+                <div class="form-group col-xs-4">
+                    <label for="cursoRegime">Regime letivo</label>
+                    <input class="form-control" name="cursoRegime"/>
+                </div>
 
-    <input type="submit" name="submit" value="Criar" />
+                <div class="form-group col-xs-3">
+                    <label for="cursoPeriodo">Períodos</label>
+                    <input class="form-control" name="cursoPeriodo"/>
+                </div>
 
-</form>
+                <div class="form-group col-xs-4">
+                    <label for="cursoCoord">Coordenador do curso</label>
+                    <select class="form-control" name="cursoCoord">
+                        <?php foreach($coordenador as $coord_item): ?>
+                            <option value="<?php echo $coord_item['prof_id']; ?>"> <?php echo $coord_item['prof_name']; ?> </option> 
+                        <?php endforeach; ?> 
+                    </select>
+                </div>
+
+            </fieldset>
+        </form>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <hr />
+                    <a href="index.php" type="button" class="btn btn-danger">Cancelar</a>
+                    <input type="submit" form="cursoForm" class="btn btn-primary" value="Salvar">
+                <hr />
+            </div>
+        </div>
+    </div>
+</div>
+
+
