@@ -47,9 +47,6 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu Principal <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="/avaliacoes"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Avaliação de Cursos</a>
-                                </li>
-                                <li>
                                     <a href="/atas">Atas de Reunião</a>
                                 </li>
                                 <li>
@@ -75,6 +72,9 @@
                                 </li>
                                 <li>
                                     <a href="/ppcs">Projetos Pedagógicos</a>
+                                </li>
+                                <li>
+                                    <a href="/simulacoes">Simulação de avaliação de Cursos</a>
                                 </li>
                             </ul>
                         <li>
