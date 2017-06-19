@@ -23,11 +23,11 @@ class Migration_initial_migration extends CI_Migration {
                                 'constraint' => '100'
                         ),
                         'ata_participants' => array(
-                                'type' => 'LONGTEXT',
+                                'type' => 'VARCHAR',
                                 'null' => TRUE
                         ),
                         'ata_deliberations' => array(
-                                'type' => 'LONGTEXT',
+                                'type' => 'VARCHAR',
                                 'null' => TRUE
                         ),
                 ));
@@ -176,22 +176,22 @@ class Migration_initial_migration extends CI_Migration {
                                 'unsigned' => TRUE,
                         ),
                         'ppc_courseProfile' => array(
-                                'type' => 'LONGTEXT',
+                                'type' => 'VARCHAR',
                         ),
                         'ppc_egressProfile' => array(
-                                'type' => 'LONGTEXT'
+                                'type' => 'VARCHAR'
                         ),
                         'ppc_courseAccess' => array(
-                                'type' => 'LONGTEXT'
+                                'type' => 'VARCHAR'
                         ),
                         'ppc_formation' => array(
-                                'type' => 'LONGTEXT'
+                                'type' => 'VARCHAR'
                         ),
                         'ppc_teachingEvaluation' => array(
-                                'type' => 'LONGTEXT'
+                                'type' => 'VARCHAR'
                         ),
                         'ppc_projectEvaluation' => array(
-                                'type' => 'LONGTEXT'
+                                'type' => 'VARCHAR'
                         ),
                         'ppc_conclusion' => array(
                                 'type' => 'VARCHAR',
@@ -202,7 +202,7 @@ class Migration_initial_migration extends CI_Migration {
                                 'constraint' => '255'
                         ),
                         'ppc_pad' => array(
-                                'type' => 'LONGTEXT'
+                                'type' => 'VARCHAR'
                         ),
                 ));
                 $this->dbforge->add_key('ppc_id', TRUE);
