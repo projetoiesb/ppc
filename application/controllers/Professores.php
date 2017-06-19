@@ -5,6 +5,7 @@ class Professores extends CI_Controller {
         {
                 parent::__construct();
                 $this->load->model('professor_model');
+                $this->load->model('atividade_model');
                 $this->load->helper('url_helper');
         }
 
@@ -17,25 +18,25 @@ class Professores extends CI_Controller {
             $this->load->view('templates/footer');
         }
 
-        public function create()
-        {
+        public function create(){
             $this->load->helper('form');
             $this->load->library('form_validation');
-
-            // Estas funções aceitam 3 parametros: nome do campo, nome Human Readable, regras
+            
+            //Estas funções aceitam 3 parametros: nome do campo, nome Human Readable, regras
             $this->form_validation->set_rules('profNome', 'Nome', 'required');
             $this->form_validation->set_rules('profCpf', 'CPF', 'required');
             $this->form_validation->set_rules('profTitulo', 'Maior titulação', 'required');
             $this->form_validation->set_rules('profAreaForm', 'Area de formação', 'required');
-            $this->form_validation->set_rules('profLink', 'Link Lattes', 'required');
-            $this->form_validation->set_rules('profAtualiza', 'Última atualização', 'required');
+            $this->form_validation->set_rules('profLink', 'Curriculo Lattes', 'required');
+            $this->form_validation->set_rules('profCurriculoData', 'Última atualização', 'required');
+            $this->form_validation->set_rules('profDataAdmissao', 'Data de admição', 'required');
+            $this->form_validation->set_rules('profMatricula', 'Matricula', 'required');
 
             if ($this->form_validation->run() === FALSE)
             {
                 $this->load->view('templates/header');
                 $this->load->view('professor/create');
                 $this->load->view('templates/footer');
-
             }
             else
             {
@@ -45,18 +46,18 @@ class Professores extends CI_Controller {
             }
         }
 
-        public function detail($id = NULL)
+        public function detail($id = NULL, $cpf = NULL)
         {
                 $data['professor_item'] = $this->professor_model->get_item($id);
-
+                $data['atividade'] = $this->atividade_model->get_list($cpf);
                 $this->load->view('templates/header');
                 $this->load->view('professor/detail', $data);
                 $this->load->view('templates/footer');
         }
 
-        public function edit() 
-        {   
-    
+        public function edit()
+        {
+
             $id = $this->uri->segment(3);
 
             if (empty($id))
@@ -74,13 +75,15 @@ class Professores extends CI_Controller {
             $this->form_validation->set_rules('profCpf', 'CPF', 'required');
             $this->form_validation->set_rules('profTitulo', 'Maior titulação', 'required');
             $this->form_validation->set_rules('profAreaForm', 'Area de formação', 'required');
-            $this->form_validation->set_rules('profLink', 'Link Lattes', 'required');
-            $this->form_validation->set_rules('profAtualiza', 'Última atualização', 'required');
+            $this->form_validation->set_rules('profLink', 'Curriculo Lattes', 'required');
+            $this->form_validation->set_rules('profCurriculoData', 'Última atualização', 'required');
+            $this->form_validation->set_rules('profDataAdmissao', 'Data de admição', 'required');
+            $this->form_validation->set_rules('profMatricula', 'Matricula', 'required');
 
             if ($this->form_validation->run() === FALSE)
             {
                 $this->load->view('templates/header');
-                $this->load->view('professor/edit', $data);
+                $this->load->view('professor/detail', $data);
                 $this->load->view('templates/footer');
 
             }
@@ -94,16 +97,16 @@ class Professores extends CI_Controller {
         public function delete()
         {
             $id = $this->uri->segment(3);
-        
+
             if (empty($id))
             {
                 show_404();
             }
-                
+
             $ata_item = $this->professor_model->get_item($id);
-        
-            $this->professor_model->delete($id);        
-            $this->index();        
+
+            $this->professor_model->delete($id);
+            $this->index();
     }
 
 }
