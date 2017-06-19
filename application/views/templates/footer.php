@@ -1,7 +1,9 @@
         <!-- Footer -->
         <footer>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12" style="text-align: center">
+                    <hr />
+                    Copyright © Grupo 3 - IESB - 2017 
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -18,5 +20,4 @@
     <script src="<?php echo base_url('js/bootstrap.min.js'); ?>"></script>
 
 </body>
-
 </html>

@@ -1,13 +1,12 @@
 <div class="container">
     <div class="row">
-        <div class="col-xs-12">   
+        <div class="col-xs-12">
 
             <h3>Nova ata</h3>
 
             <?php echo validation_errors(); ?>
 
             <?php echo form_open('atas/create', ['class' => 'well', 'id' => 'ataForm']); ?>
-
                 <fieldset>
                     <legend>Dados da ata</legend>
 
@@ -21,7 +20,7 @@
                     <input class="form-control" name="ataLocal" />
                 </div>
 
-                <div class="form-group col-xs-12">    
+                <div class="form-group col-xs-12">
                     <label for="ataPartic">Participantes</label>
                     <textarea class="form-control" name="ataPartic"></textarea>
                 </div>
@@ -41,7 +40,6 @@
                 <hr />
             </div>
         </div>
-
         </div>
     </div>
 </div>

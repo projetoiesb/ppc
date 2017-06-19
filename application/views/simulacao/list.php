@@ -195,7 +195,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <hr />
-                    <a href="index.php" type="button" class="btn btn-danger">Cancelar</a>
+                    <a href="<?php echo base_url(); ?>" type="button" class="btn btn-danger">Cancelar</a>
                     <input type="submit" form="ataForm" class="btn btn-primary" value="Calcular">
                 <hr />
             </div>

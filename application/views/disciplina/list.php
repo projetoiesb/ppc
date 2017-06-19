@@ -5,7 +5,7 @@
             <div class="col-xs-12">
                 <h1 class="page-header">Disciplinas</h1>
                 <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#create-disciplina">Incluir Disciplina</button> -->
-                <a class="btn btn-success" href="disciplinas/create">Incluir Disciplina</a>
+                <a class="btn btn-success" href="<?php echo base_url('index.php/disciplinas/create') ?>">Incluir Disciplina</a>
             </div>
         </div>
         <hr/>
@@ -85,9 +85,9 @@
                             <td><?php echo $discip_item['discip_workload']; ?></td>
                             <td>
                                 <a class="btn btn-primary edit-disciplina"
-                                   href="disciplinas/edit/<?php echo $discip_item['discip_id']; ?>">Editar</a>
+                                   href="<?php echo base_url('index.php/disciplinas/edit/') ?><?php echo $discip_item['discip_id']; ?>">Editar</a>
                                 <a class="btn btn-danger remove-item"
-                                   href="disciplinas/delete/<?php echo $discip_item['discip_id']; ?>">Excluir</a>
+                                   href="<?php echo base_url('index.php/disciplinas/delete/') ?><?php echo $discip_item['discip_id']; ?>">Excluir</a>
                             </td>
                             </tr>
                         <?php endforeach; ?>  

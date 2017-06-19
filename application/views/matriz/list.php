@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <h1 class="page-header">Matiz Curricular</h1>
-                <a href="/cursos/create" type="button" class="btn btn-primary">Inserir</a>
+                <a href="<?php echo base_url('index.php/matrizes/create/') ?>" type="button" class="btn btn-primary">Inserir</a>
             </div>
         </div>
         <hr/>

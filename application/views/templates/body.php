@@ -13,8 +13,8 @@
                          height="200"
                          alt="">
                 </a>
-                <h3>Cadastro de Curso</h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <h3><a href="index.php/cursos" style="color: black" >Cadastro de Curso</a></h3>
+                <p>Os melhores cursos!</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <a href="index.php/professores">
@@ -24,8 +24,8 @@
                          height="200"
                          alt="">
                 </a>
-                <h3>Cadastro de Professores </h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <h3><a href="index.php/professores" style="color: black" >Cadastro de Professores</a></h3>
+                <p>Em construção.</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <a href="index.php/disciplinas">
@@ -35,8 +35,8 @@
                          height="200"
                          alt="">
                 </a>
-                <h3>Cadastro de Disciplinas</h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <h3><a href="index.php/disciplinas" style="color: black" >Cadastro de Disciplinas</a></h3>
+                <p>Todo o conteúdo bem dividido!</p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <a href="index.php/matrizes">
@@ -46,8 +46,8 @@
                          height="200"
                          alt="">
                 </a>
-                <h3>Matrizes Curriculares</h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <h3><a href="index.php/matrizes" style="color: black" >Matrizes Curriculares</a></h3>
+                <p>Em construção!</p>
             </div>
 
             <div class="col-lg-4 col-sm-6 text-center">
@@ -58,8 +58,8 @@
                          height="200"
                          alt="">
                 </a>
-                <h3>Plano de Ensino</h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <h3><a href="index.php/planos" style="color: black" >Plano de Ensino</a></h3>
+                <p>Mantenha o controle!</p>
             </div>
 
             <div class="col-lg-4 col-sm-6 text-center">
@@ -70,8 +70,8 @@
                          height="200"
                          alt="">
                 </a>
-                <h3>Bibliografias</h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <h3><a href="index.php/bibliografias" style="color: black" >Bibliografias</a></h3>
+                <p>As melhores referências!</p>
             </div>
 
             <div class="col-lg-4 col-sm-6 text-center">
@@ -82,8 +82,8 @@
                          height="200"
                          alt="">
                 </a>
-                <h3>Atas de Reunião</h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <h3><a href="index.php/atas" style="color: black" >Atas de Reunião</a></h3>
+                <p>Registre aquilo que considera importante!</p>
             </div>
 
             <div class="col-lg-4 col-sm-6 text-center">
@@ -94,35 +94,21 @@
                          height="200"
                          alt="">
                 </a>
-                <h3>Cronograma de Atividades</h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <h3><a href="index.php/cronogramas" style="color: black" >Cronograma de Atividades</a></h3>
+                <p>Não perca mais nada!</p>
             </div>
 
             <div class="col-lg-4 col-sm-6 text-center">
-                <a href="index.php/avaliacoes">
+                <a href="index.php/simulacoes">
                     <img class="img-circle img-responsive img-center"
                          src="img/icons/submit.png"
                          width="200"
                          height="200"
                          alt="">
                 </a>
-                <h3>Simulação de Avalição MEC</h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <h3><a href="index.php/simulacoes" style="color: black" > Simulação de Avalição MEC</a></h3>
+                <p>Simule a nota que pretende obter!</p>
             </div>
         </div>
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; IESB - 2017 </p>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-        </footer>
-
     </div>
     <!-- /.container -->

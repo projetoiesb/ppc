@@ -1,6 +1,6 @@
 <?php echo validation_errors(); ?>
 
-<?php echo form_open('disciplinas/edit/'.$discip_item[0]['discip_id']); ?>
+<?php echo form_open(base_url('index.php/disciplinas/edit/').$discip_item[0]['discip_id']); ?>
 
 <div>
     <div role="document">
@@ -63,8 +63,9 @@
                         </div>
 
                     </fieldset>
+                    <a href="<?php echo base_url('index.php/disciplinas/') ?>" type="button" class="btn btn-danger">Cancelar</a>
                     <input type="submit" name="submit" value="Salvar atualizações" class="edit-submit-disciplina btn btn-primary"></input>
-                    <button type="button" class="btn btn-default">Cancelar</button>
+                    
             </div>              
         </div>
     </div>

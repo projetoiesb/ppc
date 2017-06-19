@@ -37,7 +37,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <hr />
-                    <a href="/index.php/simulacoes" type="button" class="btn btn-success">Nova simulação</a>
+                    <a href="<?php echo base_url('index.php/simulacoes'); ?>" type="button" class="btn btn-success">Nova simulação</a>
                 <hr />
             </div>
         </div>
