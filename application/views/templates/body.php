@@ -14,7 +14,7 @@
                          alt="">
                 </a>
                 <h3>Cadastro de Curso</h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <p></p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <a href="index.php/professores">
@@ -25,7 +25,7 @@
                          alt="">
                 </a>
                 <h3>Cadastro de Professores </h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <p></p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <a href="index.php/disciplinas">
@@ -36,7 +36,7 @@
                          alt="">
                 </a>
                 <h3>Cadastro de Disciplinas</h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <p></p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <a href="index.php/matrizes">
@@ -47,7 +47,7 @@
                          alt="">
                 </a>
                 <h3>Matrizes Curriculares</h3>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                <p></p>
             </div>
 
             <div class="col-lg-4 col-sm-6 text-center">
