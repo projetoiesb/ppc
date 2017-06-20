@@ -12,9 +12,6 @@
                          width="200"
                          height="200"
                          alt="">
-                <h3>Cadastro de Curso</h3>
-                <p></p>
-
                 <h3><a href="index.php/cursos" style="color: black" >Cadastro de Curso</a></h3>
                 <p>Os melhores cursos!</p>
 
@@ -28,8 +25,6 @@
                          alt="">
                 </a>
 
-                <h3>Cadastro de Professores </h3>
-                <p></p>
                 <h3><a href="index.php/professores" style="color: black" >Cadastro de Professores</a></h3>
                 <p>Em construção.</p>
 
@@ -42,9 +37,6 @@
                          height="200"
                          alt="">
                 </a>
-                <h3>Cadastro de Disciplinas</h3>
-                <p></p>
-
                 <h3><a href="index.php/disciplinas" style="color: black" >Cadastro de Disciplinas</a></h3>
                 <p>Todo o conteúdo bem dividido!</p>
             </div>
@@ -56,8 +48,6 @@
                          height="200"
                          alt="">
                 </a>
-                <h3>Matrizes Curriculares</h3>
-                <p></p>
                 <h3><a href="index.php/matrizes" style="color: black" >Matrizes Curriculares</a></h3>
                 <p>Em construção!</p>
             </div>
