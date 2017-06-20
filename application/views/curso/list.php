@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <h1 class="page-header">Curso</h1>
-                <a href="/cursos/create" type="button" class="btn btn-success">Novo curso</a>
+                <a href="<?php echo base_url('index.php/cursos/create/') ?>" type="button" class="btn btn-success">Novo curso</a>
             </div>
         </div>
         <hr/>
@@ -34,7 +34,7 @@
                         <?php foreach($curso as $item): ?>
                             <tr>
                             <td><?php echo $item['curso_id']; ?></td>
-                            <td><a href="/cursos/detail/<?php echo $item['curso_id']; ?>"><?php echo $item['curso_name']; ?></a></td>
+                            <td><a href="<?php echo base_url('index.php/cursos/detail/') ?><?php echo $item['curso_id']; ?>"><?php echo $item['curso_name']; ?></a></td>
                             <td><?php echo $item['curso_type']; ?></td>
                             <td><?php echo $item['curso_modality']; ?></td>
                             <td><?php echo $item['curso_license']; ?></td>
@@ -51,9 +51,9 @@
                             </td>
                             <td>
                                 <a class="btn btn-primary edit-disciplina"
-                                   href="/cursos/edit/<?php echo $item['curso_id']; ?>">Editar</a>
+                                   href="<?php echo base_url('index.php/cursos/edit/') ?><?php echo $item['curso_id']; ?>">Editar</a>
                                 <a class="btn btn-danger remove-item"
-                                   href="/cursos/delete/<?php echo $item['curso_id']; ?>">Excluir</a>
+                                   href="<?php echo base_url('index.php/cursos/delete/') ?><?php echo $item['curso_id']; ?>">Excluir</a>
                             </td>
                             </tr>
                         <?php endforeach; ?>  

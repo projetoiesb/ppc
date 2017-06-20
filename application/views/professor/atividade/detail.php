@@ -113,7 +113,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <input type="button" id="btn-cancelar" data-dismiss="modal" class="btn btn-default" value="Cancelar" />
-                                    <input type="submit" id="btn-salva" data-dismiss="modal" class="btn btn-primary btn-salvar" value="Salvar" />
+                                    <input type="submit" id="btn-salva" data-dismiss="" class="btn btn-primary btn-salvar" value="Salvar" />
                                 </div>
                             </div>
                         </form>
@@ -138,7 +138,7 @@
                     </div>
                     <div class="modal-body">
                         <?php echo validation_errors(); ?>
-                        <?php echo form_open('atividades/create/'.$professor_item[0]['prof_id']) ?>
+                        <?php echo form_open('professor/atividades/create/') ?>
                             <div class="row">
                                 <div class="col-lg-10">
                                     <label for="ativNome">Atividade: (Tipo de atividade)</label>
@@ -148,49 +148,18 @@
                                     <label for="ativHoras">Horas: </label>
                                     <input type="text" required class="form-control" id="ativHoras" name="ativHoras" />
                                 </div>
-                                <div class="col-lg-2">
-                                    <input type="text" id="ativProfCpf" name="ativProfCpf" value="<?php echo $professor_item[0]['prof_cpf']; ?>" />
-                                    <input type="text" id="ativProfId" name="ativProfId" value="<?php echo $professor_item[0]['prof_id']; ?>" />
-                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-12">
                                     <hr />
                                     <input type="button" id="btn-cancelar" data-dismiss="modal" class="btn btn-default" value="Cancelar" />
-                                    <input type="submit" id="btn-enviar-atividade" data-dismiss="" class="btn btn-primary btn-enviar-atividade" value="Enviar" />
+                                    <input type="submit" id="btn-enviar-atividade" data-dismiss="modal" class="btn btn-primary btn-enviar-atividade" value="Enviar" />
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Tabela de atividades -->
-        <div class="col-xs-12">   
-            <table id="list-atividade" class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Atividade</th>
-                        <th>Horas</th>
-                        <th>Editar/Excluir</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach($atividade as $atividade_item): ?>
-                    <tr>
-                        <td><?php echo $atividade_item['ativ_nome']; ?></td>
-                        <td><?php echo $atividade_item['ativ_horas']; ?></td>
-                        <td>
-                            <button 
-                            <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href = '<?php echo base_url('index.php/atividade/delete/'); echo $atividade_item['ativ_id']; ?>'" >
-                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir
-                            </button>
-                        </td>
-                    </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
         </div>
         <hr/>         
     </div>

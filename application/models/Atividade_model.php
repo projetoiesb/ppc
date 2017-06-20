@@ -1,9 +1,9 @@
 <?php
 
-    class Professor_model extends MY_Model {
+    class Atividade_model extends MY_Model {
 
-    	public $table = 'professor'; // you MUST mention the table name
-    	public $primary_key = 'prof_id'; // you MUST mention the primary key
+    	public $table = 'atividades'; // you MUST mention the table name
+    	public $primary_key = 'ativ_id'; // you MUST mention the primary key
     	//public $fillable = array(); // If you want, you can set an array with the fields that can be filled by insert/update
     	//public $protected = array(); // ...Or you can set an array with the fields that cannot be filled by insert/update
 
@@ -28,9 +28,9 @@
                 parent::__construct();
         }
 
-        public function get_list()
+        public function get_list($cpf = null)
         {
-                $query = $this->db->get($this->table); //, 10);
+                $query = $this->db->get($this->table, array('cpf_professor' => $cpf)); //, 10);
                 return $query->result_array();
         }
 
@@ -46,17 +46,9 @@
             $this->load->helper('url');
 
             $data = array(
-               'prof_name' => $this->input->post('profNome'),
-               'prof_cpf' => $this->input->post('profCpf'),
-               'prof_greatTitle' => $this->input->post('profTitulo'),
-               'prof_areaFormation' => $this->input->post('profAreaForm'),
-               'prof_linkLattes' => $this->input->post('profLink'),
-               'prof_lastUpdate' => $this->input->post('profCurriculoData'),
-               'prof_data_admissao' => $this->input->post('profDataAdmissao'),
-               'prof_matricula' => $this->input->post('profMatricula'),
-               'prof_membro_nde' => $this->input->post('profMembroNDE'),
-               'prof_membro_colegiado' => $this->input->post('profMembroCol'),
-               'prof_capacitado' => $this->input->post('profMembroForma')
+               'ativ_nome' => $this->input->post('ativNome'),
+               'ativ_horas' => $this->input->post('ativHoras'),
+               'cpf_professor' => $this->input->post('ativProfCpf')
             );
             if(!isset($data)){
                 return false;
@@ -71,17 +63,9 @@
             $this->load->helper('url');
 
             $data = array(
-               'prof_name' => $this->input->post('profNome'),
-               'prof_cpf' => $this->input->post('profCpf'),
-               'prof_greatTitle' => $this->input->post('profTitulo'),
-               'prof_areaFormation' => $this->input->post('profAreaForm'),
-               'prof_linkLattes' => $this->input->post('profLink'),
-               'prof_lastUpdate' => $this->input->post('profCurriculoData'),
-               'prof_data_admissao' => $this->input->post('profDataAdmissao'),
-               'prof_matricula' => $this->input->post('profMatricula'),
-               'prof_membro_nde' => $this->input->post('profMembroNDE'),
-               'prof_membro_colegiado' => $this->input->post('profMembroCol'),
-               'prof_capacitado' => $this->input->post('profMembroForma')
+               'ativ_nome' => $this->input->post('ativNome'),
+               'ativ_horas' => $this->input->post('ativHoras'),
+               'cpf_professor' => $this->input->post('ativProfCpf')
             );
 
             if ($id == 0) {
@@ -98,14 +82,15 @@
             $this->db->where($this->primary_key, $where);
             return $this->db->delete($this->table);
         }
-
+        
+        /*
         public function insert_dummy()
         {
 
             $insert_data = array(
                 array(
-                    'prof_id' => '1',
-                    'prof_name' => 'Joel Dias',
+                    'Ativ_id' => '1',
+                    'Ativ_nome' => 'Pesquisa',
                     'prof_cpf' => '33322211100',
                     'prof_greatTitle' => 'Doutorado',
                     'prof_areaFormation' => 'Matemática',
@@ -134,6 +119,7 @@
             );
             $this->db->insert_batch($this->table, $insert_data);
         }
+         * */
 }
 
 ?>

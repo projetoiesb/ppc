@@ -29,7 +29,7 @@
                             <td><?php echo $professor_item['prof_greatTitle']; ?></td>
                             <td><?php echo $professor_item['prof_areaFormation']; ?></td>
                             <td>
-                                <button type="button" class="btn btn-success btn-sm" onclick="window.location.href = '<?php echo base_url('index.php/professores/detail/'); echo $professor_item['prof_id']; echo '/'.$professor_item['prof_cpf']; ?>'" >
+                                <button type="button" class="btn btn-success btn-sm" onclick="window.location.href = '<?php echo base_url('index.php/professores/detail/'); echo $professor_item['prof_id']; ?>'" >
                                     <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Ver
                                 </button>
                             </td>
