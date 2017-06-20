@@ -15,6 +15,7 @@
                     <li>Jefferson Almeida</li>
                     <li>Kívia Cristina</li>
                     <li>Hugo Silva</li>
+		    <li>William José Fernandes</li>
                 </ul>
                 <p>Disciplina: Projeto Integrador III</p>
                 <p>Curso: Análise e Desenvolvimento de Sistemas - IESB - 3º Semestre.</p>

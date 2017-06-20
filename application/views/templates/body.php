@@ -14,7 +14,7 @@
                          alt="">
                 <h3><a href="index.php/cursos" style="color: black" >Cadastro de Curso</a></h3>
                 <p>Os melhores cursos!</p>
-
+                </a>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <a href="index.php/professores">
@@ -27,7 +27,6 @@
 
                 <h3><a href="index.php/professores" style="color: black" >Cadastro de Professores</a></h3>
                 <p>Em construção.</p>
-
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <a href="index.php/disciplinas">
